@@ -143,19 +143,57 @@
      FILTER
      ================================================= -->
 
+<!-- =================================================
+     FILTER
+     ================================================= -->
+
 <section class="filters">
+
+    <!-- FILTER-KOPF -->
 
     <div class="filter-header">
 
-        <div>
-            <span class="filter-label">
-                FILTER
+        <button
+            id="filterToggle"
+            class="filter-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="filterContent"
+        >
+
+            <span class="filter-toggle-left">
+
+                <span class="filter-icon">
+                    ⚙
+                </span>
+
+                <span class="filter-toggle-text">
+
+                    <span class="filter-label">
+                        FILTER
+                    </span>
+
+                    <span
+                        id="filterActiveCount"
+                        class="filter-active-count"
+                    >
+                        Keine Filter aktiv
+                    </span>
+
+                </span>
+
             </span>
 
-            <p class="filter-description">
-                Verfeinere deine Sammlung
-            </p>
-        </div>
+
+            <span
+                id="filterArrow"
+                class="filter-arrow"
+            >
+               ⌄
+            </span>
+
+        </button>
+
 
         <button
             id="resetFilters"
@@ -177,335 +215,346 @@
     ></div>
 
 
-    <!-- PLATTFORM -->
+    <!-- AUSKLAPPBARER FILTERBEREICH -->
 
-    <div class="filter-group">
+    <div
+        id="filterContent"
+        class="filter-content"
+        hidden
+    >
 
-        <h2>
-            Plattform
-        </h2>
 
-        <div
-            class="filter-buttons"
-            data-filter-group="platform"
-        >
+        <!-- PLATTFORM -->
 
-            <button
-                class="filter-button active"
-                data-value="Alle"
+        <div class="filter-group">
+
+            <h2>
+                Plattform
+            </h2>
+
+            <div
+                class="filter-buttons"
+                data-filter-group="platform"
             >
-                Alle
-            </button>
 
-            <button
-                class="filter-button"
-                data-value="Xbox Classic"
-            >
-                Xbox Classic
-            </button>
+                <button
+                    class="filter-button active"
+                    data-value="Alle"
+                >
+                    Alle
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Xbox 360"
-            >
-                Xbox 360
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="Xbox Classic"
+                >
+                    Xbox Classic
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Xbox One"
-            >
-                Xbox One
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="Xbox 360"
+                >
+                    Xbox 360
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Xbox Series"
-            >
-                Xbox Series
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="Xbox One"
+                >
+                    Xbox One
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Xbox Series"
+                >
+                    Xbox Series
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- FSK -->
 
-    <!-- FSK -->
+        <div class="filter-group">
 
-    <div class="filter-group">
+            <h2>
+                FSK
+            </h2>
 
-        <h2>
-            FSK
-        </h2>
-
-        <div
-            class="filter-buttons"
-            data-filter-group="fsk"
-        >
-
-            <button
-                class="filter-button active"
-                data-value="Alle"
+            <div
+                class="filter-buttons"
+                data-filter-group="fsk"
             >
-                Alle
-            </button>
 
-            <button
-                class="filter-button"
-                data-value="0"
-            >
-                0
-            </button>
+                <button
+                    class="filter-button active"
+                    data-value="Alle"
+                >
+                    Alle
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="6"
-            >
-                6
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="0"
+                >
+                    0
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="12"
-            >
-                12
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="6"
+                >
+                    6
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="16"
-            >
-                16
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="12"
+                >
+                    12
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="18"
-            >
-                18
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="16"
+                >
+                    16
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="18"
+                >
+                    18
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
 
+        <!-- GENRE -->
 
-    <!-- GENRE -->
+        <div class="filter-group">
 
-    <div class="filter-group">
+            <h2>
+                Genre
+            </h2>
 
-        <h2>
-            Genre
-        </h2>
-
-        <div
-            class="filter-buttons"
-            data-filter-group="genre"
-        >
-
-            <button
-                class="filter-button active"
-                data-value="Alle"
+            <div
+                class="filter-buttons"
+                data-filter-group="genre"
             >
-                Alle
-            </button>
 
-            <button
-                class="filter-button"
-                data-value="Action-Adventure"
-            >
-                Action-Adventure
-            </button>
+                <button
+                    class="filter-button active"
+                    data-value="Alle"
+                >
+                    Alle
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Beat 'em up"
-            >
-                Beat 'em up
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="Action-Adventure"
+                >
+                    Action-Adventure
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Couch-Coop"
+                <button
+                    class="filter-button"
+                    data-value="Beat 'em up"
+                >
+                    Beat 'em up
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Couch-Coop"
+                >
+                    Couch-Coop
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Ego Shooter"
+                >
+                    Ego Shooter
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Family"
+                >
+                    Family
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Flight"
+                >
+                    Flight
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Jump 'n Run"
+                >
+                    Jump 'n Run
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Party"
+                >
+                    Party
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Plattformer"
+                >
+                    Plattformer
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Racer"
+                >
+                    Racer
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Rollenspiele"
+                >
+                    Rollenspiele
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Rundentaktik"
+                >
+                    Rundentaktik
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Seafight"
+                >
+                    Seafight
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Sport"
+                >
+                    Sport
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Survival"
+                >
+                    Survival
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Survival-Horror"
+                >
+                    Survival-Horror
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Third-Person-Shooter"
+                >
+                    Third-Person-Shooter
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- VERFÜGBARKEIT -->
+
+        <div class="filter-group">
+
+            <h2>
+                Verfügbarkeit
+            </h2>
+
+            <div
+                class="filter-buttons"
+                data-filter-group="availability"
             >
+
+                <button
+                    class="filter-button active"
+                    data-value="Alle"
+                >
+                    Alle
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Disc"
+                >
+                    💿 Disc
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-value="Digital"
+                >
+                    ☁ Digital
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- COUCH-COOP -->
+
+        <div class="filter-group">
+
+            <h2>
                 Couch-Coop
-            </button>
+            </h2>
 
-            <button
-                class="filter-button"
-                data-value="Ego Shooter"
+            <div
+                class="filter-buttons"
+                data-filter-group="couchCoop"
             >
-                Ego Shooter
-            </button>
 
-            <button
-                class="filter-button"
-                data-value="Family"
-            >
-                Family
-            </button>
+                <button
+                    class="filter-button active"
+                    data-value="Alle"
+                >
+                    Alle
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Flight"
-            >
-                Flight
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="Ja"
+                >
+                    Ja
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Jump 'n Run"
-            >
-                Jump 'n Run
-            </button>
+                <button
+                    class="filter-button"
+                    data-value="Nein"
+                >
+                    Nein
+                </button>
 
-            <button
-                class="filter-button"
-                data-value="Party"
-            >
-                Party
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Plattformer"
-            >
-                Plattformer
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Racer"
-            >
-                Racer
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Rollenspiele"
-            >
-                Rollenspiele
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Rundentaktik"
-            >
-                Rundentaktik
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Seafight"
-            >
-                Seafight
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Sport"
-            >
-                Sport
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Survival"
-            >
-                Survival
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Survival-Horror"
-            >
-                Survival-Horror
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Third-Person-Shooter"
-            >
-                Third-Person-Shooter
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- VERFÜGBARKEIT -->
-
-    <div class="filter-group">
-
-        <h2>
-            Verfügbarkeit
-        </h2>
-
-        <div
-            class="filter-buttons"
-            data-filter-group="availability"
-        >
-
-            <button
-                class="filter-button active"
-                data-value="Alle"
-            >
-                Alle
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Disc"
-            >
-                💿 Disc
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Digital"
-            >
-                ☁ Digital
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- COUCH-COOP -->
-
-    <div class="filter-group">
-
-        <h2>
-            Couch-Coop
-        </h2>
-
-        <div
-            class="filter-buttons"
-            data-filter-group="couchCoop"
-        >
-
-            <button
-                class="filter-button active"
-                data-value="Alle"
-            >
-                Alle
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Ja"
-            >
-                Ja
-            </button>
-
-            <button
-                class="filter-button"
-                data-value="Nein"
-            >
-                Nein
-            </button>
+            </div>
 
         </div>
 
