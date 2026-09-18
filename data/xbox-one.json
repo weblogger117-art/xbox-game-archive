@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "the-witcher-3",
+    "title": "The Witcher 3: Wild Hunt",
+    "platform": "Xbox One",
+    "fsk": 16,
+    "genre": "Rollenspiele",
+    "availability": "Disc",
+    "couchCoop": false,
+    "year": 2015,
+    "developer": "CD PROJEKT RED",
+    "description": "Als Geralt von Riva begibt sich der Spieler auf die Suche nach Ciri und erkundet eine weitläufige Fantasy-Welt voller Quests, Monster und Entscheidungen.",
+    "cover": "images/the-witcher-3/cover.webp",
+    "screenshots": [
+      "images/the-witcher-3/screen01.webp",
+      "images/the-witcher-3/screen02.webp",
+      "images/the-witcher-3/screen03.webp"
+    ]
+  }
+]
