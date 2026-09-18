@@ -156,9 +156,7 @@ function displayGames(gameList) {
         `;
 
 
-        /* =====================================================
-           SPIEL ÖFFNEN
-           ===================================================== */
+        /* Spiel öffnen */
 
         card.addEventListener(
             "click",
@@ -195,25 +193,15 @@ function openGameDetail(gameId) {
 
     /* Sammlung ausblenden */
 
-    document
-        .querySelector(".hero")
-        .hidden = true;
+    document.querySelector(".hero").hidden = true;
 
-    document
-        .querySelector(".search-section")
-        .hidden = true;
+    document.querySelector(".search-section").hidden = true;
 
-    document
-        .querySelector(".filters")
-        .hidden = true;
+    document.querySelector(".filters").hidden = true;
 
-    document
-        .querySelector(".game-counter")
-        .hidden = true;
+    document.querySelector(".game-counter").hidden = true;
 
-    document
-        .querySelector(".games-section")
-        .hidden = true;
+    document.querySelector(".games-section").hidden = true;
 
 
     /* Detailansicht anzeigen */
@@ -472,8 +460,6 @@ function openGameDetail(gameId) {
     }
 
 
-    /* Nach oben */
-
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -533,6 +519,7 @@ function applyFilters() {
 
     const searchInput =
         document.getElementById("searchInput");
+
 
     const searchTerm =
         searchInput.value
@@ -616,62 +603,6 @@ function applyFilters() {
 
 
 /* =========================================================
-   FILTER-BUTTONS
-   ========================================================= */
-
-document
-    .querySelectorAll(".filter-buttons")
-    .forEach(filterGroup => {
-
-
-        const groupName =
-            filterGroup.dataset.filterGroup;
-
-
-        filterGroup
-            .querySelectorAll(".filter-button")
-            .forEach(button => {
-
-
-                button.addEventListener(
-                    "click",
-                    () => {
-
-
-                        /* Alle anderen Buttons
-                           dieser Gruppe deaktivieren */
-
-                        filterGroup
-                            .querySelectorAll(
-                                ".filter-button"
-                            )
-                            .forEach(item => {
-
-                                item.classList.remove(
-                                    "active"
-                                );
-
-                            });
-
-
-                        /* Gewählten Button aktivieren */
-
-                        button.classList.add(
-                            "active"
-                        );
-
-
-                        /* Filterwert speichern */
-
-                        activeFilters[groupName] =
-                            button.dataset.value;
-
-
-                        /* Filter anwenden */
-
-                        applyFilters();
-
-                       /* =========================================================
    AKTIVE FILTER ANZEIGEN
    ========================================================= */
 
@@ -720,10 +651,12 @@ function updateActiveFilters() {
 
 
             tag.innerHTML = `
+
                 <span>
                     ${labels[key]}:
                     <strong>${value}</strong>
                 </span>
+
 
                 <button
                     type="button"
@@ -731,6 +664,7 @@ function updateActiveFilters() {
                 >
                     ×
                 </button>
+
             `;
 
 
@@ -764,7 +698,8 @@ function updateActiveFilters() {
 
 }
 
-                       /* =========================================================
+
+/* =========================================================
    EINZELNEN FILTER ZURÜCKSETZEN
    ========================================================= */
 
@@ -785,7 +720,9 @@ function resetSingleFilter(filterName) {
             .querySelectorAll(".filter-button")
             .forEach(button => {
 
-                button.classList.remove("active");
+                button.classList.remove(
+                    "active"
+                );
 
             });
 
@@ -798,7 +735,9 @@ function resetSingleFilter(filterName) {
 
         if (allButton) {
 
-            allButton.classList.add("active");
+            allButton.classList.add(
+                "active"
+            );
 
         }
 
@@ -808,6 +747,60 @@ function resetSingleFilter(filterName) {
     applyFilters();
 
 }
+
+
+/* =========================================================
+   FILTER-BUTTONS
+   ========================================================= */
+
+document
+    .querySelectorAll(".filter-buttons")
+    .forEach(filterGroup => {
+
+        const groupName =
+            filterGroup.dataset.filterGroup;
+
+
+        filterGroup
+            .querySelectorAll(".filter-button")
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        /* Andere Buttons dieser Gruppe
+                           deaktivieren */
+
+                        filterGroup
+                            .querySelectorAll(
+                                ".filter-button"
+                            )
+                            .forEach(item => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            });
+
+
+                        /* Gewählten Button aktivieren */
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        /* Filterwert speichern */
+
+                        activeFilters[groupName] =
+                            button.dataset.value;
+
+
+                        /* Filter anwenden */
+
+                        applyFilters();
 
                     }
                 );
@@ -828,6 +821,7 @@ document
         applyFilters
     );
 
+
 /* =========================================================
    ALLE FILTER ZURÜCKSETZEN
    ========================================================= */
@@ -838,7 +832,7 @@ document
         "click",
         () => {
 
-            /* Alle Filter auf "Alle" setzen */
+            /* Filter zurücksetzen */
 
             activeFilters = {
                 platform: "Alle",
@@ -883,19 +877,20 @@ document
                 });
 
 
-            /* Suche ebenfalls leeren */
+            /* Suche leeren */
 
             document.getElementById(
                 "searchInput"
             ).value = "";
 
 
-            /* Filter neu anwenden */
+            /* Filter anwenden */
 
             applyFilters();
 
         }
     );
+
 
 /* =========================================================
    ZURÜCK-BUTTON
