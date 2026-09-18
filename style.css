@@ -2426,3 +2426,371 @@ button {
     }
 
 }
+
+/* =========================================================
+   EINHEITLICHE FILTER-CARD
+   ========================================================= */
+
+.filters {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+
+    overflow: hidden;
+
+    padding: 0;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   FILTER-KOPF
+   ========================================================= */
+
+.filter-header {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.filter-toggle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 68px;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 0;
+
+    background: transparent;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.filter-toggle:hover {
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.filter-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.filter-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        var(--xbox-green-soft);
+
+    color:
+        var(--xbox-green-light);
+
+    font-size: 18px;
+}
+
+
+.filter-toggle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.filter-label {
+    color: var(--text);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.filter-active-count {
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+}
+
+
+.filter-arrow {
+    color: var(--xbox-green-light);
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   AKTIVE FILTER
+   ========================================================= */
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0 20px 16px;
+}
+
+
+.active-filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 11px;
+
+    background:
+        var(--xbox-green-soft);
+
+    border:
+        1px solid rgba(
+            93,
+            194,
+            30,
+            0.35
+        );
+
+    border-radius: 999px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.82rem;
+}
+
+
+.active-filter-tag strong {
+    color:
+        var(--xbox-green-light);
+
+    font-weight: 600;
+}
+
+
+.active-filter-tag button {
+    width: 20px;
+    height: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.active-filter-tag button:hover {
+    background:
+        var(--xbox-green);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   AUFKLAPPBARER INHALT
+   ========================================================= */
+
+.filter-content {
+    padding: 6px 20px 20px;
+
+    margin: 0;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    animation: filterOpen 0.2s ease;
+}
+
+
+.filter-content[hidden] {
+    display: none;
+}
+
+
+@keyframes filterOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TRENNLINIE BEIM ÖFFNEN
+   ========================================================= */
+
+.filter-content::before {
+    content: "";
+
+    display: block;
+
+    height: 1px;
+
+    margin:
+        0 0 22px;
+
+    background:
+        var(--border);
+}
+
+
+/* =========================================================
+   FILTER-AKTIONEN
+   ========================================================= */
+
+.filter-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.reset-filters-button {
+    min-height: 42px;
+
+    padding: 9px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background:
+        var(--background-soft);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.reset-filters-button:hover {
+    background:
+        var(--surface-hover);
+
+    border-color:
+        rgba(93, 194, 30, 0.4);
+
+    color:
+        var(--xbox-green-light);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .filter-toggle {
+        min-height: 62px;
+
+        padding:
+            12px 15px;
+    }
+
+
+    .filter-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 16px;
+    }
+
+
+    .active-filters {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+    .filter-content {
+        padding:
+            4px 15px 16px;
+    }
+
+
+    .filter-actions {
+        justify-content: stretch;
+    }
+
+
+    .reset-filters-button {
+        width: 100%;
+    }
+
+}
