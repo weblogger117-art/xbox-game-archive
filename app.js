@@ -1,5 +1,4 @@
 let games = [];
-
 let currentGame = null;
 
 /* =========================================================
@@ -7,13 +6,11 @@ let currentGame = null;
    ========================================================= */
 
 let activeFilters = {
-
     platform: "Alle",
     fsk: "Alle",
     genre: "Alle",
     availability: "Alle",
     couchCoop: "Alle"
-
 };
 
 
@@ -22,33 +19,20 @@ let activeFilters = {
    ========================================================= */
 
 async function loadGames() {
-
     try {
-
-        const response =
-            await fetch("data/games.json");
+        const response = await fetch("data/games.json");
 
         if (!response.ok) {
-
-            throw new Error(
-                "Spieldaten konnten nicht geladen werden."
-            );
-
+            throw new Error("Spieldaten konnten nicht geladen werden.");
         }
 
-        games =
-            await response.json();
-
+        games = await response.json();
 
         displayGames(games);
 
-
     } catch (error) {
-
-        console.error(error);
-
+        console.error("Fehler beim Laden der Spiele:", error);
     }
-
 }
 
 
@@ -58,84 +42,51 @@ async function loadGames() {
 
 function displayGames(gameList) {
 
-    const gamesGrid =
-        document.getElementById(
-            "gamesGrid"
-        );
+    const gamesGrid = document.getElementById("gamesGrid");
+    const counter = document.querySelector(".counter-number");
 
+    counter.textContent = gameList.length;
 
-    const counter =
-        document.querySelector(
-            ".counter-number"
-        );
-
-
-    counter.textContent =
-        gameList.length;
-
-
-    gamesGrid.innerHTML =
-        "";
-
+    gamesGrid.innerHTML = "";
 
     if (gameList.length === 0) {
 
         gamesGrid.innerHTML = `
-
             <div class="no-games">
-
                 Keine Spiele gefunden.
-
             </div>
-
         `;
 
         return;
-
     }
 
 
     gameList.forEach(game => {
 
-        const card =
-            document.createElement(
-                "article"
-            );
+        const card = document.createElement("article");
 
-
-        card.className =
-            "game-card";
-
+        card.className = "game-card";
 
         card.innerHTML = `
-
             <div class="game-cover">
-
                 <img
                     src="${game.cover}"
                     alt="${game.title}"
                     loading="lazy"
                 >
-
             </div>
-
 
             <div class="game-info">
 
-                <h3>
-                    ${game.title}
-                </h3>
-
+                <h3>${game.title}</h3>
 
                 <p class="game-platform">
                     ${game.platform}
                 </p>
 
-
                 <p class="game-genre">
                     ${game.genre}
                 </p>
-
 
                 <div class="game-meta">
 
@@ -145,7 +96,6 @@ function displayGames(gameList) {
                     >
                         ${game.fsk}
                     </span>
-
 
                     <span
                         class="meta-icon"
@@ -157,7 +107,6 @@ function displayGames(gameList) {
                                 : "☁"
                         }
                     </span>
-
 
                     ${
                         game.couchCoop
@@ -175,32 +124,21 @@ function displayGames(gameList) {
                 </div>
 
             </div>
-
         `;
 
 
-        /*
-         * Karte anklickbar machen
-         */
+        /* Spiel anklickbar machen */
 
-        card.addEventListener(
-            "click",
-            () => {
+        card.addEventListener("click", function () {
 
-                openGameDetail(
-                    game.id
-                );
+            openGameDetail(game.id);
 
-            }
-        );
+        });
 
 
-        gamesGrid.appendChild(
-            card
-        );
+        gamesGrid.appendChild(card);
 
     });
-
 }
 
 
@@ -210,124 +148,50 @@ function displayGames(gameList) {
 
 function openGameDetail(gameId) {
 
-    const game =
-        games.find(
-            item =>
-                item.id === gameId
-        );
-
+    const game = games.find(item => item.id === gameId);
 
     if (!game) {
-
         return;
-
     }
 
-
-    currentGame =
-        game;
+    currentGame = game;
 
 
-    /*
-     * Sammlung ausblenden
-     */
-
-    document.querySelector(
-        ".hero"
-    ).hidden = true;
+    document.querySelector(".hero").hidden = true;
+    document.querySelector(".search-section").hidden = true;
+    document.querySelector(".filters").hidden = true;
+    document.querySelector(".game-counter").hidden = true;
+    document.querySelector(".games-section").hidden = true;
 
 
-    document.querySelector(
-        ".search-section"
-    ).hidden = true;
+    const detail = document.getElementById("gameDetail");
+
+    detail.hidden = false;
 
 
-    document.querySelector(
-        ".filters"
-    ).hidden = true;
+    /* Cover */
+
+    const cover = document.getElementById("detailCover");
+
+    cover.src = game.cover;
+    cover.alt = game.title;
 
 
-    document.querySelector(
-        ".game-counter"
-    ).hidden = true;
+    /* Grunddaten */
 
-
-    document.querySelector(
-        ".games-section"
-    ).hidden = true;
-
-
-    /*
-     * Detailansicht anzeigen
-     */
-
-    const detail =
-        document.getElementById(
-            "gameDetail"
-        );
-
-
-    detail.hidden =
-        false;
-
-
-    /*
-     * Cover
-     */
-
-    const cover =
-        document.getElementById(
-            "detailCover"
-        );
-
-
-    cover.src =
-        game.cover;
-
-
-    cover.alt =
-        game.title;
-
-
-    /*
-     * Plattform
-     */
-
-    document.getElementById(
-        "detailPlatform"
-    ).textContent =
+    document.getElementById("detailPlatform").textContent =
         game.platform;
 
-
-    /*
-     * Titel
-     */
-
-    document.getElementById(
-        "detailTitle"
-    ).textContent =
+    document.getElementById("detailTitle").textContent =
         game.title;
 
-
-    /*
-     * Beschreibung
-     */
-
-    document.getElementById(
-        "detailDescription"
-    ).textContent =
+    document.getElementById("detailDescription").textContent =
         game.description;
 
 
-    /*
-     * Metadaten
-     */
+    /* Meta-Daten */
 
-    const meta =
-        document.getElementById(
-            "detailMeta"
-        );
-
+    const meta = document.getElementById("detailMeta");
 
     meta.innerHTML = `
 
@@ -335,20 +199,19 @@ function openGameDetail(gameId) {
             FSK ${game.fsk}
         </span>
 
-
         <span class="detail-badge">
             ${game.genre}
         </span>
 
-
         <span class="detail-badge">
+
             ${
                 game.availability === "Disc"
                     ? "💿 Disc"
                     : "☁ Digital"
             }
-        </span>
 
+        </span>
 
         <span
             class="detail-badge ${
@@ -357,231 +220,178 @@ function openGameDetail(gameId) {
                     : "coop-no"
             }"
         >
+
             🎮 Couch-Coop:
+
             ${
                 game.couchCoop
                     ? "Ja"
                     : "Nein"
             }
+
         </span>
 
     `;
 
 
-    /*
- * Screenshot-Galerie
- */
+    /* =====================================================
+       SCREENSHOT-GALERIE
+       ===================================================== */
 
-const screenshots =
-    document.getElementById(
-        "detailScreenshots"
-    );
+    const screenshots =
+        document.getElementById("detailScreenshots");
 
-
-screenshots.innerHTML = "";
+    screenshots.innerHTML = "";
 
 
-/*
- * Wenn keine Screenshots vorhanden sind
- */
+    if (
+        !game.screenshots ||
+        game.screenshots.length === 0
+    ) {
 
-if (
-    !game.screenshots ||
-    game.screenshots.length === 0
-) {
+        screenshots.innerHTML = `
+            <div class="no-screenshots">
+                Noch keine Screenshots hinterlegt.
+            </div>
+        `;
 
-    screenshots.innerHTML = `
+    } else {
 
-        <div class="no-screenshots">
+        const gallery =
+            document.createElement("div");
 
-            Noch keine Screenshots hinterlegt.
-
-        </div>
-
-    `;
-
-} else {
+        gallery.className =
+            "screenshot-gallery";
 
 
-    /*
-     * Galerie aufbauen
-     */
+        const mainContainer =
+            document.createElement("div");
 
-    const gallery =
-        document.createElement(
-            "div"
-        );
-
-    gallery.className =
-        "screenshot-gallery";
+        mainContainer.className =
+            "screenshot-main";
 
 
-    /*
-     * Hauptbild
-     */
+        const mainImage =
+            document.createElement("img");
 
-    const mainContainer =
-        document.createElement(
-            "div"
-        );
+        mainImage.src =
+            game.screenshots[0];
 
-    mainContainer.className =
-        "screenshot-main";
+        mainImage.alt =
+            `${game.title} Screenshot 1`;
 
-
-    const mainImage =
-        document.createElement(
-            "img"
-        );
-
-    mainImage.src =
-        game.screenshots[0];
-
-    mainImage.alt =
-        `${game.title} Screenshot 1`;
-
-    mainImage.loading =
-        "lazy";
+        mainImage.loading =
+            "lazy";
 
 
-    mainContainer.appendChild(
-        mainImage
-    );
+        mainContainer.appendChild(mainImage);
 
 
-    /*
-     * Vorschaubilder
-     */
+        const thumbnails =
+            document.createElement("div");
 
-    const thumbnails =
-        document.createElement(
-            "div"
-        );
-
-    thumbnails.className =
-        "screenshot-thumbnails";
+        thumbnails.className =
+            "screenshot-thumbnails";
 
 
-    game.screenshots.forEach(
-        (screenshot, index) => {
+        game.screenshots.forEach(
+            (screenshot, index) => {
 
-            const thumbnail =
-                document.createElement(
-                    "button"
-                );
+                const thumbnail =
+                    document.createElement("button");
 
-            thumbnail.className =
-                "screenshot-thumbnail";
+                thumbnail.type =
+                    "button";
 
-
-            if (index === 0) {
-
-                thumbnail.classList.add(
-                    "active"
-                );
-
-            }
+                thumbnail.className =
+                    "screenshot-thumbnail";
 
 
-            thumbnail.type =
-                "button";
-
-
-            const image =
-                document.createElement(
-                    "img"
-                );
-
-
-            image.src =
-                screenshot;
-
-            image.alt =
-                `${game.title} Screenshot ${index + 1}`;
-
-            image.loading =
-                "lazy";
-
-
-            thumbnail.appendChild(
-                image
-            );
-
-
-            /*
-             * Beim Anklicken
-             * Hauptbild wechseln
-             */
-
-            thumbnail.addEventListener(
-                "click",
-                () => {
-
-                    mainImage.src =
-                        screenshot;
-
-                    mainImage.alt =
-                        `${game.title} Screenshot ${index + 1}`;
-
-
-                    document
-                        .querySelectorAll(
-                            ".screenshot-thumbnail"
-                        )
-                        .forEach(
-                            item =>
-                                item.classList.remove(
-                                    "active"
-                                )
-                        );
-
+                if (index === 0) {
 
                     thumbnail.classList.add(
                         "active"
                     );
 
                 }
-            );
 
 
-            thumbnails.appendChild(
-                thumbnail
-            );
+                const image =
+                    document.createElement("img");
 
-        }
-    );
+                image.src =
+                    screenshot;
 
+                image.alt =
+                    `${game.title} Screenshot ${index + 1}`;
 
-    /*
-     * Elemente zusammensetzen
-     */
-
-    gallery.appendChild(
-        mainContainer
-    );
+                image.loading =
+                    "lazy";
 
 
-    gallery.appendChild(
-        thumbnails
-    );
+                thumbnail.appendChild(image);
 
 
-    screenshots.appendChild(
-        gallery
-    );
+                thumbnail.addEventListener(
+                    "click",
+                    function () {
 
-}
+                        mainImage.src =
+                            screenshot;
+
+                        mainImage.alt =
+                            `${game.title} Screenshot ${index + 1}`;
 
 
-    /*
-     * Nach oben scrollen
-     */
+                        thumbnails
+                            .querySelectorAll(
+                                ".screenshot-thumbnail"
+                            )
+                            .forEach(item => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            });
+
+
+                        thumbnail.classList.add(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                thumbnails.appendChild(
+                    thumbnail
+                );
+
+            }
+        );
+
+
+        gallery.appendChild(
+            mainContainer
+        );
+
+        gallery.appendChild(
+            thumbnails
+        );
+
+
+        screenshots.appendChild(
+            gallery
+        );
+
+    }
+
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 }
 
 
@@ -600,37 +410,193 @@ function closeGameDetail() {
         ".hero"
     ).hidden = false;
 
-
     document.querySelector(
         ".search-section"
     ).hidden = false;
-
 
     document.querySelector(
         ".filters"
     ).hidden = false;
 
-
     document.querySelector(
         ".game-counter"
     ).hidden = false;
-
 
     document.querySelector(
         ".games-section"
     ).hidden = false;
 
 
-    currentGame =
-        null;
+    currentGame = null;
 
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 }
+
+
+/* =========================================================
+   FILTER ANWENDEN
+   ========================================================= */
+
+function applyFilters() {
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    const searchTerm =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    const filteredGames =
+        games.filter(game => {
+
+
+            /* Suche */
+
+            const matchesSearch =
+                game.title
+                    .toLowerCase()
+                    .includes(searchTerm);
+
+
+            /* Plattform */
+
+            const matchesPlatform =
+                activeFilters.platform === "Alle" ||
+                game.platform ===
+                    activeFilters.platform;
+
+
+            /* FSK */
+
+            const matchesFsk =
+                activeFilters.fsk === "Alle" ||
+                game.fsk ===
+                    Number(activeFilters.fsk);
+
+
+            /* Genre */
+
+            const matchesGenre =
+                activeFilters.genre === "Alle" ||
+                game.genre ===
+                    activeFilters.genre;
+
+
+            /* Verfügbarkeit */
+
+            const matchesAvailability =
+                activeFilters.availability === "Alle" ||
+                game.availability ===
+                    activeFilters.availability;
+
+
+            /* Couch-Coop */
+
+            const matchesCouchCoop =
+                activeFilters.couchCoop === "Alle" ||
+
+                (
+                    activeFilters.couchCoop === "Ja" &&
+                    game.couchCoop === true
+                ) ||
+
+                (
+                    activeFilters.couchCoop === "Nein" &&
+                    game.couchCoop === false
+                );
+
+
+            return (
+                matchesSearch &&
+                matchesPlatform &&
+                matchesFsk &&
+                matchesGenre &&
+                matchesAvailability &&
+                matchesCouchCoop
+            );
+
+        });
+
+
+    displayGames(filteredGames);
+}
+
+
+/* =========================================================
+   FILTER-BUTTONS
+   ========================================================= */
+
+document
+    .querySelectorAll(".filter-buttons")
+    .forEach(filterGroup => {
+
+        const groupName =
+            filterGroup.dataset.filterGroup;
+
+
+        filterGroup
+            .querySelectorAll(".filter-button")
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        /* Aktiven Button setzen */
+
+                        filterGroup
+                            .querySelectorAll(
+                                ".filter-button"
+                            )
+                            .forEach(item => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            });
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        /* Filterwert speichern */
+
+                        activeFilters[groupName] =
+                            button.dataset.value;
+
+
+                        /* Filter anwenden */
+
+                        applyFilters();
+
+                    }
+                );
+
+            });
+
+    });
+
+
+/* =========================================================
+   SUCHE
+   ========================================================= */
+
+document
+    .getElementById("searchInput")
+    .addEventListener(
+        "input",
+        applyFilters
+    );
 
 
 /* =========================================================
@@ -650,194 +616,3 @@ document
    ========================================================= */
 
 loadGames();
-
-/* =========================================================
-   FILTER
-   ========================================================= */
-
-function applyFilters() {
-
-    const searchInput =
-        document.getElementById(
-            "searchInput"
-        );
-
-
-    const searchTerm =
-        searchInput.value
-            .trim()
-            .toLowerCase();
-
-
-    const filteredGames =
-        games.filter(game => {
-
-
-            /*
-             * Suche
-             */
-
-            const matchesSearch =
-                game.title
-                    .toLowerCase()
-                    .includes(searchTerm);
-
-
-            /*
-             * Plattform
-             */
-
-            const matchesPlatform =
-                activeFilters.platform === "Alle" ||
-                game.platform ===
-                    activeFilters.platform;
-
-
-            /*
-             * FSK
-             */
-
-            const matchesFsk =
-                activeFilters.fsk === "Alle" ||
-                game.fsk ===
-                    Number(
-                        activeFilters.fsk
-                    );
-
-
-            /*
-             * Genre
-             */
-
-            const matchesGenre =
-                activeFilters.genre === "Alle" ||
-                game.genre ===
-                    activeFilters.genre;
-
-
-            /*
-             * Verfügbarkeit
-             */
-
-            const matchesAvailability =
-                activeFilters.availability === "Alle" ||
-                game.availability ===
-                    activeFilters.availability;
-
-
-            /*
-             * Couch-Coop
-             */
-
-            const matchesCouchCoop =
-                activeFilters.couchCoop === "Alle" ||
-                (
-                    activeFilters.couchCoop === "Ja" &&
-                    game.couchCoop === true
-                ) ||
-                (
-                    activeFilters.couchCoop === "Nein" &&
-                    game.couchCoop === false
-                );
-
-
-            /*
-             * Alle Bedingungen müssen stimmen
-             */
-
-            return (
-                matchesSearch &&
-                matchesPlatform &&
-                matchesFsk &&
-                matchesGenre &&
-                matchesAvailability &&
-                matchesCouchCoop
-            );
-
-        });
-
-
-    displayGames(
-        filteredGames
-    );
-
-}
-
-/* =========================================================
-   FILTER-BUTTONS
-   ========================================================= */
-
-document
-    .querySelectorAll(
-        ".filter-buttons"
-    )
-    .forEach(
-        filterGroup => {
-
-
-            const groupName =
-                filterGroup.dataset.filterGroup;
-
-
-            filterGroup
-                .querySelectorAll(
-                    ".filter-button"
-                )
-                .forEach(
-                    button => {
-
-
-                        button.addEventListener(
-                            "click",
-                            () => {
-
-
-                                /*
-                                 * Aktiven Button
-                                 * markieren
-                                 */
-
-                                filterGroup
-                                    .querySelectorAll(
-                                        ".filter-button"
-                                    )
-                                    .forEach(
-                                        item => {
-
-                                            item.classList.remove(
-                                                "active"
-                                            );
-
-                                        }
-                                    );
-
-
-                                button.classList.add(
-                                    "active"
-                                );
-
-
-                                /*
-                                 * Filterwert speichern
-                                 */
-
-                                activeFilters[
-                                    groupName
-                                ] =
-                                    button.dataset.value;
-
-
-                                /*
-                                 * Filter anwenden
-                                 */
-
-                                applyFilters();
-
-                            }
-                        );
-
-                    }
-                );
-
-        }
-    );
