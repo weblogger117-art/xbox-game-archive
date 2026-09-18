@@ -2794,3 +2794,37 @@ button {
     }
 
 }
+
+/* FSK-Farben */
+.fsk-badge,
+.fsk-detail {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* FSK 0 – Grün */
+.fsk-0 {
+    background: #16a34a;
+}
+
+/* FSK 6 – Gelb */
+.fsk-6 {
+    background: #facc15;
+    color: #111111;
+}
+
+/* FSK 12 – Orange */
+.fsk-12 {
+    background: #f59e0b;
+    color: #111111;
+}
+
+/* FSK 16 – Rot */
+.fsk-16 {
+    background: #dc2626;
+}
+
+/* FSK 18 – Dunkelrot */
+.fsk-18 {
+    background: #991b1b;
+}
