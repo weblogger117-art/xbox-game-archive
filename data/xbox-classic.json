@@ -35,4 +35,22 @@
     "images/beyond-good-and-evil/screen03.webp"
   ]
 }
+  {
+  "id": "blood-wake",
+  "title": "Blood Wake",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Seafight",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2001,
+  "developer": "Stormfront Studios",
+  "description": "In Blood Wake übernimmt der Spieler das Kommando über ein bewaffnetes Schnellboot und kämpft sich durch intensive Seeschlachten. Mit verschiedenen Booten und Waffen gilt es, feindliche Flotten zu besiegen und die eigene Crew zu rächen.",
+  "cover": "images/blood-wake/cover.webp",
+  "screenshots": [
+    "images/blood-wake/screen01.webp",
+    "images/blood-wake/screen02.webp",
+    "images/blood-wake/screen03.webp"
+  ]
+}
 ]
