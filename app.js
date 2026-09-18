@@ -532,10 +532,7 @@ function closeGameDetail() {
 function applyFilters() {
 
     const searchInput =
-        document.getElementById(
-            "searchInput"
-        );
-
+        document.getElementById("searchInput");
 
     const searchTerm =
         searchInput.value
@@ -559,32 +556,28 @@ function applyFilters() {
 
             const matchesPlatform =
                 activeFilters.platform === "Alle" ||
-                game.platform ===
-                    activeFilters.platform;
+                game.platform === activeFilters.platform;
 
 
             /* FSK */
 
             const matchesFsk =
                 activeFilters.fsk === "Alle" ||
-                game.fsk ===
-                    Number(activeFilters.fsk);
+                game.fsk === Number(activeFilters.fsk);
 
 
             /* Genre */
 
             const matchesGenre =
                 activeFilters.genre === "Alle" ||
-                game.genre ===
-                    activeFilters.genre;
+                game.genre === activeFilters.genre;
 
 
             /* Verfügbarkeit */
 
             const matchesAvailability =
                 activeFilters.availability === "Alle" ||
-                game.availability ===
-                    activeFilters.availability;
+                game.availability === activeFilters.availability;
 
 
             /* Couch-Coop */
@@ -616,6 +609,8 @@ function applyFilters() {
 
 
     displayGames(filteredGames);
+
+    updateActiveFilters();
 
 }
 
@@ -676,6 +671,144 @@ document
 
                         applyFilters();
 
+                       /* =========================================================
+   AKTIVE FILTER ANZEIGEN
+   ========================================================= */
+
+function updateActiveFilters() {
+
+    const container =
+        document.getElementById("activeFilters");
+
+
+    if (!container) {
+        return;
+    }
+
+
+    container.innerHTML = "";
+
+
+    const labels = {
+        platform: "Plattform",
+        fsk: "FSK",
+        genre: "Genre",
+        availability: "Verfügbarkeit",
+        couchCoop: "Couch-Coop"
+    };
+
+
+    let activeCount = 0;
+
+
+    Object.entries(activeFilters).forEach(
+        ([key, value]) => {
+
+            if (value === "Alle") {
+                return;
+            }
+
+
+            activeCount++;
+
+
+            const tag =
+                document.createElement("span");
+
+            tag.className =
+                "active-filter-tag";
+
+
+            tag.innerHTML = `
+                <span>
+                    ${labels[key]}:
+                    <strong>${value}</strong>
+                </span>
+
+                <button
+                    type="button"
+                    aria-label="${labels[key]} entfernen"
+                >
+                    ×
+                </button>
+            `;
+
+
+            tag
+                .querySelector("button")
+                .addEventListener(
+                    "click",
+                    () => {
+
+                        resetSingleFilter(key);
+
+                    }
+                );
+
+
+            container.appendChild(tag);
+
+        }
+    );
+
+
+    if (activeCount === 0) {
+
+        container.hidden = true;
+
+    } else {
+
+        container.hidden = false;
+
+    }
+
+}
+
+                       /* =========================================================
+   EINZELNEN FILTER ZURÜCKSETZEN
+   ========================================================= */
+
+function resetSingleFilter(filterName) {
+
+    activeFilters[filterName] = "Alle";
+
+
+    const filterGroup =
+        document.querySelector(
+            `.filter-buttons[data-filter-group="${filterName}"]`
+        );
+
+
+    if (filterGroup) {
+
+        filterGroup
+            .querySelectorAll(".filter-button")
+            .forEach(button => {
+
+                button.classList.remove("active");
+
+            });
+
+
+        const allButton =
+            filterGroup.querySelector(
+                '[data-value="Alle"]'
+            );
+
+
+        if (allButton) {
+
+            allButton.classList.add("active");
+
+        }
+
+    }
+
+
+    applyFilters();
+
+}
+
                     }
                 );
 
@@ -695,6 +828,74 @@ document
         applyFilters
     );
 
+/* =========================================================
+   ALLE FILTER ZURÜCKSETZEN
+   ========================================================= */
+
+document
+    .getElementById("resetFilters")
+    .addEventListener(
+        "click",
+        () => {
+
+            /* Alle Filter auf "Alle" setzen */
+
+            activeFilters = {
+                platform: "Alle",
+                fsk: "Alle",
+                genre: "Alle",
+                availability: "Alle",
+                couchCoop: "Alle"
+            };
+
+
+            /* Alle Filtergruppen zurücksetzen */
+
+            document
+                .querySelectorAll(".filter-buttons")
+                .forEach(filterGroup => {
+
+                    filterGroup
+                        .querySelectorAll(".filter-button")
+                        .forEach(button => {
+
+                            button.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    const allButton =
+                        filterGroup.querySelector(
+                            '[data-value="Alle"]'
+                        );
+
+
+                    if (allButton) {
+
+                        allButton.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                });
+
+
+            /* Suche ebenfalls leeren */
+
+            document.getElementById(
+                "searchInput"
+            ).value = "";
+
+
+            /* Filter neu anwenden */
+
+            applyFilters();
+
+        }
+    );
 
 /* =========================================================
    ZURÜCK-BUTTON
