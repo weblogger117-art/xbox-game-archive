@@ -20,30 +20,36 @@ let activeFilters = {
    ========================================================= */
 
 async function loadGames() {
-
     try {
+        const files = [
+            "data/xbox-classic.json",
+            "data/xbox-360.json",
+            "data/xbox-one.json",
+            "data/xbox-series.json"
+        ];
 
-        const response = await fetch("data/games.json");
+        const responses = await Promise.all(
+            files.map(file => fetch(file))
+        );
 
-        if (!response.ok) {
-            throw new Error("Spieldaten konnten nicht geladen werden.");
-        }
+        responses.forEach(response => {
+            if (!response.ok) {
+                throw new Error("Spieldaten konnten nicht geladen werden.");
+            }
+        });
 
-        games = await response.json();
+        const data = await Promise.all(
+            responses.map(response => response.json())
+        );
+
+        games = data.flat();
 
         displayGames(games);
 
     } catch (error) {
-
-        console.error(
-            "Fehler beim Laden der Spieldaten:",
-            error
-        );
-
+        console.error("Fehler beim Laden der Spieldaten:", error);
     }
-
 }
-
 
 /* =========================================================
    SPIELE ANZEIGEN
