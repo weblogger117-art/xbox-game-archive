@@ -355,21 +355,123 @@ function openGameDetail(gameId) {
 
 
     /*
-     * Screenshots
+ * Screenshot-Galerie
+ */
+
+const screenshots =
+    document.getElementById(
+        "detailScreenshots"
+    );
+
+
+screenshots.innerHTML = "";
+
+
+/*
+ * Wenn keine Screenshots vorhanden sind
+ */
+
+if (
+    !game.screenshots ||
+    game.screenshots.length === 0
+) {
+
+    screenshots.innerHTML = `
+
+        <div class="no-screenshots">
+
+            Noch keine Screenshots hinterlegt.
+
+        </div>
+
+    `;
+
+} else {
+
+
+    /*
+     * Galerie aufbauen
      */
 
-    const screenshots =
-        document.getElementById(
-            "detailScreenshots"
+    const gallery =
+        document.createElement(
+            "div"
         );
 
+    gallery.className =
+        "screenshot-gallery";
 
-    screenshots.innerHTML =
-        "";
+
+    /*
+     * Hauptbild
+     */
+
+    const mainContainer =
+        document.createElement(
+            "div"
+        );
+
+    mainContainer.className =
+        "screenshot-main";
+
+
+    const mainImage =
+        document.createElement(
+            "img"
+        );
+
+    mainImage.src =
+        game.screenshots[0];
+
+    mainImage.alt =
+        `${game.title} Screenshot 1`;
+
+    mainImage.loading =
+        "lazy";
+
+
+    mainContainer.appendChild(
+        mainImage
+    );
+
+
+    /*
+     * Vorschaubilder
+     */
+
+    const thumbnails =
+        document.createElement(
+            "div"
+        );
+
+    thumbnails.className =
+        "screenshot-thumbnails";
 
 
     game.screenshots.forEach(
         (screenshot, index) => {
+
+            const thumbnail =
+                document.createElement(
+                    "button"
+                );
+
+            thumbnail.className =
+                "screenshot-thumbnail";
+
+
+            if (index === 0) {
+
+                thumbnail.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            thumbnail.type =
+                "button";
+
 
             const image =
                 document.createElement(
@@ -380,21 +482,81 @@ function openGameDetail(gameId) {
             image.src =
                 screenshot;
 
-
             image.alt =
                 `${game.title} Screenshot ${index + 1}`;
-
 
             image.loading =
                 "lazy";
 
 
-            screenshots.appendChild(
+            thumbnail.appendChild(
                 image
+            );
+
+
+            /*
+             * Beim Anklicken
+             * Hauptbild wechseln
+             */
+
+            thumbnail.addEventListener(
+                "click",
+                () => {
+
+                    mainImage.src =
+                        screenshot;
+
+                    mainImage.alt =
+                        `${game.title} Screenshot ${index + 1}`;
+
+
+                    document
+                        .querySelectorAll(
+                            ".screenshot-thumbnail"
+                        )
+                        .forEach(
+                            item =>
+                                item.classList.remove(
+                                    "active"
+                                )
+                        );
+
+
+                    thumbnail.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            thumbnails.appendChild(
+                thumbnail
             );
 
         }
     );
+
+
+    /*
+     * Elemente zusammensetzen
+     */
+
+    gallery.appendChild(
+        mainContainer
+    );
+
+
+    gallery.appendChild(
+        thumbnails
+    );
+
+
+    screenshots.appendChild(
+        gallery
+    );
+
+}
 
 
     /*
