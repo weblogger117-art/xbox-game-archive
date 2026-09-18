@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -20,25 +22,48 @@
 
     <title>Xbox Game Archive</title>
 
-    <link rel="stylesheet" href="style.css">
 
-    <link rel="manifest" href="manifest.json">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
 
     <link
         rel="apple-touch-icon"
         href="images/icons/icon-192.png"
     >
+
 </head>
 
+
 <body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
 
     <header class="app-header">
 
         <div class="header-content">
 
             <div class="logo">
-                <span class="logo-x">X</span>
-                <span class="logo-text">XBOX GAME ARCHIVE</span>
+
+                <span class="logo-x">
+                    X
+                </span>
+
+                <span class="logo-text">
+                    XBOX GAME ARCHIVE
+                </span>
+
             </div>
 
         </div>
@@ -46,273 +71,645 @@
     </header>
 
 
+
+    <!-- =====================================================
+         HAUPTBEREICH
+         ===================================================== -->
+
     <main class="app-content">
 
-        <section class="hero">
 
-            <h1>Meine Xbox-Sammlung</h1>
+        <!-- =================================================
+             SAMMLUNG
+             ================================================= -->
 
-            <p>
-                Dein persönliches Archiv für Xbox Classic,
-                Xbox 360, Xbox One und Xbox Series.
-            </p>
-
-        </section>
+        <div id="collectionView">
 
 
-        <section class="search-section">
+            <!-- HERO -->
 
-            <label for="searchInput">
-                Spiele suchen
-            </label>
+            <section class="hero">
 
-            <div class="search-box">
+                <h1>
+                    Meine Xbox-Sammlung
+                </h1>
 
-                <span class="search-icon">⌕</span>
 
-                <input
-                    type="search"
-                    id="searchInput"
-                    placeholder="Nach einem Spiel suchen..."
-                    autocomplete="off"
+                <p>
+                    Dein persönliches Archiv für Xbox Classic,
+                    Xbox 360, Xbox One und Xbox Series.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SUCHE
+                 ================================================= -->
+
+            <section class="search-section">
+
+                <label for="searchInput">
+                    Spiele suchen
+                </label>
+
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Nach einem Spiel suchen..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FILTER
+                 ================================================= -->
+
+            <section class="filters">
+
+
+                <!-- PLATTFORM -->
+
+                <div class="filter-group">
+
+                    <h2>
+                        Plattform
+                    </h2>
+
+
+                    <div
+                        class="filter-buttons"
+                        data-filter-group="platform"
+                    >
+
+                        <button
+                            class="filter-button active"
+                            data-value="Alle"
+                        >
+                            Alle
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Xbox Classic"
+                        >
+                            Xbox Classic
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Xbox 360"
+                        >
+                            Xbox 360
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Xbox One"
+                        >
+                            Xbox One
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Xbox Series"
+                        >
+                            Xbox Series
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FSK -->
+
+                <div class="filter-group">
+
+                    <h2>
+                        FSK
+                    </h2>
+
+
+                    <div
+                        class="filter-buttons"
+                        data-filter-group="fsk"
+                    >
+
+                        <button
+                            class="filter-button active"
+                            data-value="Alle"
+                        >
+                            Alle
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="0"
+                        >
+                            0
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="6"
+                        >
+                            6
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="12"
+                        >
+                            12
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="16"
+                        >
+                            16
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="18"
+                        >
+                            18
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GENRE -->
+
+                <div class="filter-group">
+
+                    <h2>
+                        Genre
+                    </h2>
+
+
+                    <div
+                        class="filter-buttons"
+                        data-filter-group="genre"
+                    >
+
+                        <button
+                            class="filter-button active"
+                            data-value="Alle"
+                        >
+                            Alle
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Action-Adventure"
+                        >
+                            Action-Adventure
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Beat 'em up"
+                        >
+                            Beat 'em up
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Couch-Coop"
+                        >
+                            Couch-Coop
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Ego Shooter"
+                        >
+                            Ego Shooter
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Family"
+                        >
+                            Family
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Flight"
+                        >
+                            Flight
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Jump 'n Run"
+                        >
+                            Jump 'n Run
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Party"
+                        >
+                            Party
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Plattformer"
+                        >
+                            Plattformer
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Racer"
+                        >
+                            Racer
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Rollenspiele"
+                        >
+                            Rollenspiele
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Rundentaktik"
+                        >
+                            Rundentaktik
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Seafight"
+                        >
+                            Seafight
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Sport"
+                        >
+                            Sport
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Survival"
+                        >
+                            Survival
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Survival-Horror"
+                        >
+                            Survival-Horror
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Third-Person-Shooter"
+                        >
+                            Third-Person-Shooter
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VERFÜGBARKEIT -->
+
+                <div class="filter-group">
+
+                    <h2>
+                        Verfügbarkeit
+                    </h2>
+
+
+                    <div
+                        class="filter-buttons"
+                        data-filter-group="availability"
+                    >
+
+                        <button
+                            class="filter-button active"
+                            data-value="Alle"
+                        >
+                            Alle
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Disc"
+                        >
+                            Disc
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Digital"
+                        >
+                            Digital
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COUCH-COOP -->
+
+                <div class="filter-group">
+
+                    <h2>
+                        Couch-Coop
+                    </h2>
+
+
+                    <div
+                        class="filter-buttons"
+                        data-filter-group="couchCoop"
+                    >
+
+                        <button
+                            class="filter-button active"
+                            data-value="Alle"
+                        >
+                            Alle
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Ja"
+                        >
+                            Ja
+                        </button>
+
+
+                        <button
+                            class="filter-button"
+                            data-value="Nein"
+                        >
+                            Nein
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SPIELEZÄHLER
+                 ================================================= -->
+
+            <section class="game-counter">
+
+                <span class="counter-number">
+                    0
+                </span>
+
+
+                <span class="counter-label">
+                    SPIELE GEFUNDEN
+                </span>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SPIELE
+                 ================================================= -->
+
+            <section class="games-section">
+
+                <div
+                    id="gamesGrid"
+                    class="games-grid"
                 >
 
+                    <!-- Spiele werden automatisch geladen -->
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             DETAILANSICHT
+             ===================================================== -->
+
+        <section
+            id="gameDetail"
+            class="game-detail"
+            hidden
+        >
+
+
+            <!-- ZURÜCK -->
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+
+                ← Zurück zur Sammlung
+
+            </button>
+
+
+
+            <!-- DETAIL-HEADER -->
+
+            <div class="detail-header">
+
+
+                <!-- COVER -->
+
+                <div class="detail-cover">
+
+                    <img
+                        id="detailCover"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+
+                <!-- INFORMATIONEN -->
+
+                <div class="detail-main">
+
+
+                    <span
+                        id="detailPlatform"
+                        class="detail-platform"
+                    >
+                    </span>
+
+
+                    <h1 id="detailTitle">
+                    </h1>
+
+
+                    <div
+                        id="detailMeta"
+                        class="detail-meta"
+                    >
+                    </div>
+
+
+                    <p
+                        id="detailDescription"
+                        class="detail-description"
+                    >
+                    </p>
+
+                </div>
+
             </div>
+
+
+
+            <!-- SCREENSHOTS -->
+
+            <div class="detail-section">
+
+                <h2>
+                    Screenshots
+                </h2>
+
+
+                <div
+                    id="detailScreenshots"
+                    class="detail-screenshots"
+                >
+                </div>
+
+            </div>
+
 
         </section>
 
-
-        <section class="filters">
-
-            <div class="filter-group">
-
-                <h2>Plattform</h2>
-
-                <div class="filter-buttons">
-                    <button class="filter-button active">
-                        Alle
-                    </button>
-
-                    <button class="filter-button">
-                        Xbox Classic
-                    </button>
-
-                    <button class="filter-button">
-                        Xbox 360
-                    </button>
-
-                    <button class="filter-button">
-                        Xbox One
-                    </button>
-
-                    <button class="filter-button">
-                        Xbox Series
-                    </button>
-                </div>
-
-            </div>
-
-
-            <div class="filter-group">
-
-                <h2>FSK</h2>
-
-                <div class="filter-buttons">
-                    <button class="filter-button active">
-                        Alle
-                    </button>
-
-                    <button class="filter-button">0</button>
-                    <button class="filter-button">6</button>
-                    <button class="filter-button">12</button>
-                    <button class="filter-button">16</button>
-                    <button class="filter-button">18</button>
-                </div>
-
-            </div>
-
-
-            <div class="filter-group">
-
-                <h2>Genre</h2>
-
-                <div class="filter-buttons">
-
-                    <button class="filter-button active">
-                        Alle
-                    </button>
-
-                    <button class="filter-button">
-                        Action-Adventure
-                    </button>
-
-                    <button class="filter-button">
-                        Beat 'em up
-                    </button>
-
-                    <button class="filter-button">
-                        Couch-Coop
-                    </button>
-
-                    <button class="filter-button">
-                        Ego Shooter
-                    </button>
-
-                    <button class="filter-button">
-                        Family
-                    </button>
-
-                    <button class="filter-button">
-                        Flight
-                    </button>
-
-                    <button class="filter-button">
-                        Jump 'n Run
-                    </button>
-
-                    <button class="filter-button">
-                        Party
-                    </button>
-
-                    <button class="filter-button">
-                        Plattformer
-                    </button>
-
-                    <button class="filter-button">
-                        Racer
-                    </button>
-
-                    <button class="filter-button">
-                        Rollenspiele
-                    </button>
-
-                    <button class="filter-button">
-                        Rundentaktik
-                    </button>
-
-                    <button class="filter-button">
-                        Seafight
-                    </button>
-
-                    <button class="filter-button">
-                        Sport
-                    </button>
-
-                    <button class="filter-button">
-                        Survival
-                    </button>
-
-                    <button class="filter-button">
-                        Survival-Horror
-                    </button>
-
-                    <button class="filter-button">
-                        Third-Person-Shooter
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <div class="filter-group">
-
-                <h2>Verfügbarkeit</h2>
-
-                <div class="filter-buttons">
-
-                    <button class="filter-button active">
-                        Alle
-                    </button>
-
-                    <button class="filter-button">
-                        Disc
-                    </button>
-
-                    <button class="filter-button">
-                        Digital
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <div class="filter-group">
-
-                <h2>Couch-Coop</h2>
-
-                <div class="filter-buttons">
-
-                    <button class="filter-button active">
-                        Alle
-                    </button>
-
-                    <button class="filter-button">
-                        Ja
-                    </button>
-
-                    <button class="filter-button">
-                        Nein
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="game-counter">
-
-            <span class="counter-number">0</span>
-
-            <span class="counter-label">
-                SPIELE GEFUNDEN
-            </span>
-
-        </section>
-
-
-        <section class="games-section">
-
-            <div id="gamesGrid" class="games-grid">
-
-                <!-- Spiele werden später automatisch geladen -->
-
-            </div>
-
-        </section>
 
     </main>
 
 
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer class="app-footer">
 
-        <span>Xbox Game Archive</span>
+        <span>
+            Xbox Game Archive
+        </span>
 
-        <span>Private Collection</span>
+
+        <span>
+            Private Collection
+        </span>
 
     </footer>
 
 
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
     <script src="app.js"></script>
+
 
     <script>
 
         if ("serviceWorker" in navigator) {
 
-            window.addEventListener("load", () => {
+            window.addEventListener(
+                "load",
+                () => {
 
-                navigator.serviceWorker.register(
-                    "service-worker.js"
-                );
+                    navigator.serviceWorker.register(
+                        "service-worker.js"
+                    );
 
-            });
+                }
+            );
 
         }
 
     </script>
 
+
 </body>
+
 </html>
