@@ -2126,3 +2126,303 @@ button {
     }
 
 }
+
+/* =========================================================
+   AUFKLAPPBARE FILTERLEISTE
+   ========================================================= */
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+
+.filter-toggle {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 64px;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.filter-toggle:hover {
+    background: var(--surface-hover);
+    border-color: rgba(93, 194, 30, 0.35);
+}
+
+
+.filter-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.filter-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    background: var(--xbox-green-soft);
+
+    color: var(--xbox-green-light);
+
+    font-size: 18px;
+}
+
+
+.filter-toggle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.filter-label {
+    color: var(--text);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.filter-active-count {
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+}
+
+
+.filter-arrow {
+    color: var(--xbox-green-light);
+
+    font-size: 24px;
+    line-height: 1;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.reset-filters-button {
+    flex-shrink: 0;
+
+    min-height: 44px;
+
+    padding: 9px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    color: var(--text-secondary);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.reset-filters-button:hover {
+    background: var(--surface-hover);
+
+    border-color:
+        rgba(93, 194, 30, 0.4);
+
+    color:
+        var(--xbox-green-light);
+}
+
+
+/* =========================================================
+   FILTER-INHALT
+   ========================================================= */
+
+.filter-content {
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+
+    animation: filterOpen 0.2s ease;
+}
+
+
+@keyframes filterOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   AKTIVE FILTER
+   ========================================================= */
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 14px;
+}
+
+
+.active-filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 11px;
+
+    background:
+        var(--xbox-green-soft);
+
+    border:
+        1px solid rgba(
+            93,
+            194,
+            30,
+            0.35
+        );
+
+    border-radius: 999px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 0.82rem;
+}
+
+
+.active-filter-tag strong {
+    color:
+        var(--xbox-green-light);
+
+    font-weight: 600;
+}
+
+
+.active-filter-tag button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.active-filter-tag button:hover {
+    background:
+        var(--xbox-green);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .filter-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .filter-toggle {
+        width: 100%;
+    }
+
+
+    .reset-filters-button {
+        width: 100%;
+    }
+
+
+    .filter-content {
+        padding: 16px;
+
+        border-radius:
+            var(--radius-medium);
+    }
+
+
+    .active-filters {
+        gap: 7px;
+    }
+
+
+    .active-filter-tag {
+        font-size: 0.78rem;
+    }
+
+}
