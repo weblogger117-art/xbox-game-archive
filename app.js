@@ -121,16 +121,12 @@ function displayGames(gameList) {
 </span>
 
 
-                    <span
-                        class="meta-icon"
-                        title="${game.availability}"
-                    >
-                        ${
-                            game.availability === "Disc"
-                                ? "💿"
-                                : "☁"
-                        }
-                    </span>
+                    <img
+        src="${game.availability === "Disc" ? "images/icons/disc.png" : "images/icons/cloud.png"}"
+        class="availability-icon"
+        alt="${game.availability === "Disc" ? "Disc" : "Digital"}"
+        title="${game.availability}"
+    >
 
 
                     ${
