@@ -1,0 +1,11 @@
+{
+    "name": "Xbox Game Archive",
+    "short_name": "Xbox Archive",
+    "description": "Meine persönliche Xbox-Spielebibliothek",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#0b0d0c",
+    "theme_color": "#0b0d0c",
+    "orientation": "portrait-primary",
+    "lang": "de-DE"
+}
