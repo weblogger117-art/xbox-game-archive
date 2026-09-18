@@ -129,18 +129,14 @@ function displayGames(gameList) {
     >
 
 
-                    ${
-                        game.couchCoop
-                            ? `
-                                <span
-                                    class="meta-icon coop"
-                                    title="Couch-Coop"
-                                >
-                                    🎮
-                                </span>
-                            `
-                            : ""
-                    }
+                    ${game.couchCoop ? `
+    <img
+        src="images/icons/coop.png"
+        class="availability-icon coop-icon"
+        alt="Couch-Coop"
+        title="Couch-Coop"
+    >
+` : ""}
 
                 </div>
 
@@ -257,7 +253,7 @@ function openGameDetail(gameId) {
 
         <span class="detail-badge availability-detail">
     <img
-        src="${game.availability === "Disc" ? "images/icons/disc.svg" : "images/icons/cloud.svg"}"
+        src="${game.availability === "Disc" ? "images/icons/disc.png" : "images/icons/cloud.png"}"
         class="availability-icon"
         alt="${game.availability === "Disc" ? "Disc" : "Digital"}"
     >
@@ -265,22 +261,16 @@ function openGameDetail(gameId) {
 </span>
 
 
-        <span
-            class="
-                detail-badge
-                ${game.couchCoop ? "coop-yes" : "coop-no"}
-            "
+       <span class="detail-badge ${game.couchCoop ? "coop-yes" : "coop-no"}">
+    ${game.couchCoop ? `
+        <img
+            src="images/icons/coop.png"
+            class="availability-icon coop-icon"
+            alt="Couch-Coop"
         >
-
-            🎮 Couch-Coop:
-
-            ${
-                game.couchCoop
-                    ? "Ja"
-                    : "Nein"
-            }
-
-        </span>
+    ` : ""}
+    Couch-Coop: ${game.couchCoop ? "Ja" : "Nein"}
+</span>
 
     `;
 
