@@ -2,6 +2,20 @@ let games = [];
 
 let currentGame = null;
 
+/* =========================================================
+   AKTIVE FILTER
+   ========================================================= */
+
+let activeFilters = {
+
+    platform: "Alle",
+    fsk: "Alle",
+    genre: "Alle",
+    availability: "Alle",
+    couchCoop: "Alle"
+
+};
+
 
 /* =========================================================
    SPIELE LADEN
@@ -636,3 +650,194 @@ document
    ========================================================= */
 
 loadGames();
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+function applyFilters() {
+
+    const searchInput =
+        document.getElementById(
+            "searchInput"
+        );
+
+
+    const searchTerm =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    const filteredGames =
+        games.filter(game => {
+
+
+            /*
+             * Suche
+             */
+
+            const matchesSearch =
+                game.title
+                    .toLowerCase()
+                    .includes(searchTerm);
+
+
+            /*
+             * Plattform
+             */
+
+            const matchesPlatform =
+                activeFilters.platform === "Alle" ||
+                game.platform ===
+                    activeFilters.platform;
+
+
+            /*
+             * FSK
+             */
+
+            const matchesFsk =
+                activeFilters.fsk === "Alle" ||
+                game.fsk ===
+                    Number(
+                        activeFilters.fsk
+                    );
+
+
+            /*
+             * Genre
+             */
+
+            const matchesGenre =
+                activeFilters.genre === "Alle" ||
+                game.genre ===
+                    activeFilters.genre;
+
+
+            /*
+             * Verfügbarkeit
+             */
+
+            const matchesAvailability =
+                activeFilters.availability === "Alle" ||
+                game.availability ===
+                    activeFilters.availability;
+
+
+            /*
+             * Couch-Coop
+             */
+
+            const matchesCouchCoop =
+                activeFilters.couchCoop === "Alle" ||
+                (
+                    activeFilters.couchCoop === "Ja" &&
+                    game.couchCoop === true
+                ) ||
+                (
+                    activeFilters.couchCoop === "Nein" &&
+                    game.couchCoop === false
+                );
+
+
+            /*
+             * Alle Bedingungen müssen stimmen
+             */
+
+            return (
+                matchesSearch &&
+                matchesPlatform &&
+                matchesFsk &&
+                matchesGenre &&
+                matchesAvailability &&
+                matchesCouchCoop
+            );
+
+        });
+
+
+    displayGames(
+        filteredGames
+    );
+
+}
+
+/* =========================================================
+   FILTER-BUTTONS
+   ========================================================= */
+
+document
+    .querySelectorAll(
+        ".filter-buttons"
+    )
+    .forEach(
+        filterGroup => {
+
+
+            const groupName =
+                filterGroup.dataset.filterGroup;
+
+
+            filterGroup
+                .querySelectorAll(
+                    ".filter-button"
+                )
+                .forEach(
+                    button => {
+
+
+                        button.addEventListener(
+                            "click",
+                            () => {
+
+
+                                /*
+                                 * Aktiven Button
+                                 * markieren
+                                 */
+
+                                filterGroup
+                                    .querySelectorAll(
+                                        ".filter-button"
+                                    )
+                                    .forEach(
+                                        item => {
+
+                                            item.classList.remove(
+                                                "active"
+                                            );
+
+                                        }
+                                    );
+
+
+                                button.classList.add(
+                                    "active"
+                                );
+
+
+                                /*
+                                 * Filterwert speichern
+                                 */
+
+                                activeFilters[
+                                    groupName
+                                ] =
+                                    button.dataset.value;
+
+
+                                /*
+                                 * Filter anwenden
+                                 */
+
+                                applyFilters();
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+    );
