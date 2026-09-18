@@ -1,0 +1,56 @@
+[
+    {
+        "id": "gears-of-war-3",
+        "title": "Gears of War 3",
+        "platform": "Xbox 360",
+        "fsk": 18,
+        "genre": "Third-Person-Shooter",
+        "availability": "Disc",
+        "couchCoop": true,
+        "year": 2011,
+        "developer": "Epic Games",
+        "description": "Gears of War 3 setzt die Geschichte der Delta Squad fort und führt den Kampf gegen die Locust und Lambent zu seinem dramatischen Höhepunkt.",
+        "cover": "images/gears-of-war-3/cover.webp",
+        "screenshots": [
+            "images/gears-of-war-3/screen01.webp",
+            "images/gears-of-war-3/screen02.webp",
+            "images/gears-of-war-3/screen03.webp"
+        ]
+    },
+    {
+        "id": "the-witcher-3",
+        "title": "The Witcher 3: Wild Hunt",
+        "platform": "Xbox One",
+        "fsk": 16,
+        "genre": "Rollenspiele",
+        "availability": "Disc",
+        "couchCoop": false,
+        "year": 2015,
+        "developer": "CD PROJEKT RED",
+        "description": "Als Geralt von Riva begibt sich der Spieler auf die Suche nach Ciri und erkundet eine weitläufige Fantasy-Welt voller Quests, Monster und Entscheidungen.",
+        "cover": "images/the-witcher-3/cover.webp",
+        "screenshots": [
+            "images/the-witcher-3/screen01.webp",
+            "images/the-witcher-3/screen02.webp",
+            "images/the-witcher-3/screen03.webp"
+        ]
+    },
+    {
+        "id": "forza-horizon-5",
+        "title": "Forza Horizon 5",
+        "platform": "Xbox Series",
+        "fsk": 12,
+        "genre": "Racer",
+        "availability": "Digital",
+        "couchCoop": false,
+        "year": 2021,
+        "developer": "Playground Games",
+        "description": "Forza Horizon 5 bringt das Horizon-Festival nach Mexiko und verbindet offene Welt, Rennen, Fahrzeuge und eine große Auswahl an Aktivitäten.",
+        "cover": "images/forza-horizon-5/cover.webp",
+        "screenshots": [
+            "images/forza-horizon-5/screen01.webp",
+            "images/forza-horizon-5/screen02.webp",
+            "images/forza-horizon-5/screen03.webp"
+        ]
+    }
+]
