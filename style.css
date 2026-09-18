@@ -1,0 +1,589 @@
+:root {
+
+    --background: #0b0d0c;
+    --surface: #151917;
+    --surface-light: #1d211f;
+
+    --xbox-green: #107c10;
+    --xbox-light: #5dc21e;
+
+    --text: #ffffff;
+    --text-secondary: #9ea4a0;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #172019 0%,
+            var(--background) 45%
+        );
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* HEADER */
+
+.app-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(11, 13, 12, 0.88);
+
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.header-content {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        18px
+        24px;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.logo-x {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 9px;
+
+    background: var(--xbox-green);
+
+    font-size: 20px;
+
+}
+
+
+.logo-text {
+    font-size: 15px;
+}
+
+
+/* CONTENT */
+
+.app-content {
+
+    width: min(
+        1400px,
+        calc(100% - 32px)
+    );
+
+    margin: auto;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    padding:
+        55px
+        0
+        35px;
+
+}
+
+
+.hero h1 {
+
+    margin: 0 0 12px;
+
+    font-size:
+        clamp(
+            32px,
+            5vw,
+            58px
+        );
+
+    line-height: 1;
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* SEARCH */
+
+.search-section {
+
+    margin-bottom: 35px;
+
+}
+
+
+.search-section label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+.search-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        0
+        18px;
+
+    height: 58px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition: 0.2s;
+
+}
+
+
+.search-box:focus-within {
+
+    border-color:
+        var(--xbox-light);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(93, 194, 30, 0.12);
+
+}
+
+
+.search-icon {
+
+    color: var(--xbox-light);
+
+    font-size: 25px;
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+
+.search-box input::placeholder {
+
+    color: #68706b;
+
+}
+
+
+/* FILTER */
+
+.filters {
+
+    display: grid;
+
+    gap: 26px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.filter-group h2 {
+
+    margin: 0 0 11px;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+.filter-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.filter-button {
+
+    padding:
+        10px
+        15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border 0.2s,
+        transform 0.2s;
+
+}
+
+
+.filter-button:hover {
+
+    color: white;
+
+    background: var(--surface-light);
+
+    transform: translateY(-1px);
+
+}
+
+
+.filter-button.active {
+
+    background: var(--xbox-green);
+
+    border-color:
+        var(--xbox-green);
+
+    color: white;
+
+}
+
+
+/* COUNTER */
+
+.game-counter {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    padding: 24px;
+
+    margin-bottom: 28px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172319,
+            #111512
+        );
+
+    border: 1px solid
+        rgba(
+            93,
+            194,
+            30,
+            0.15
+        );
+
+}
+
+
+.counter-number {
+
+    font-size: 36px;
+
+    font-weight: 800;
+
+    color: var(--xbox-light);
+
+}
+
+
+.counter-label {
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* GAMES */
+
+.games-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(
+                180px,
+                1fr
+            )
+        );
+
+    gap: 20px;
+
+}
+
+
+.games-section {
+
+    padding-bottom: 60px;
+
+}
+
+
+/* FOOTER */
+
+.app-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        25px
+        24px;
+
+    color: #69706c;
+
+    font-size: 12px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .app-content {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .header-content {
+
+        padding:
+            15px
+            12px;
+
+    }
+
+
+    .hero {
+
+        padding:
+            35px
+            0
+            25px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 15px;
+
+    }
+
+
+    .filter-buttons {
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+
+        scrollbar-width: none;
+
+    }
+
+
+    .filter-buttons::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .filter-button {
+
+        flex: 0 0 auto;
+
+        padding:
+            9px
+            13px;
+
+    }
+
+
+    .games-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 12px;
+
+    }
+
+
+    .game-counter {
+
+        padding: 20px;
+
+    }
+
+
+    .counter-number {
+
+        font-size: 30px;
+
+    }
+
+
+    .app-footer {
+
+        padding:
+            20px
+            12px;
+
+    }
+
+}
