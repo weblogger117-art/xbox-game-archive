@@ -1,4 +1,4 @@
-const CACHE_NAME = "xbox-game-archive-v1";
+const CACHE_NAME = "xbox-game-archive-v2";
 
 const APP_FILES = [
     "./",
@@ -8,6 +8,10 @@ const APP_FILES = [
     "./manifest.json"
 ];
 
+
+/* =========================================================
+   INSTALLATION
+   ========================================================= */
 
 self.addEventListener("install", event => {
 
@@ -22,8 +26,48 @@ self.addEventListener("install", event => {
 
     );
 
+    self.skipWaiting();
+
 });
 
+
+/* =========================================================
+   AKTIVIERUNG
+   ========================================================= */
+
+self.addEventListener("activate", event => {
+
+    event.waitUntil(
+
+        caches.keys()
+            .then(cacheNames => {
+
+                return Promise.all(
+
+                    cacheNames
+                        .filter(
+                            cacheName =>
+                                cacheName !== CACHE_NAME
+                        )
+                        .map(
+                            cacheName =>
+                                caches.delete(cacheName)
+                        )
+
+                );
+
+            })
+
+    );
+
+    self.clients.claim();
+
+});
+
+
+/* =========================================================
+   ANFRAGEN
+   ========================================================= */
 
 self.addEventListener("fetch", event => {
 
