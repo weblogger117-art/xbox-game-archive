@@ -2839,4 +2839,10 @@ button {
     object-fit: contain;
     display: inline-block;
     flex-shrink: 0;
+
+    .availability-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
 }
