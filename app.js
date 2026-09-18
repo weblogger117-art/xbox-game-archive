@@ -255,15 +255,14 @@ function openGameDetail(gameId) {
         </span>
 
 
-        <span class="detail-badge">
-
-            ${
-                game.availability === "Disc"
-                    ? "💿 Disc"
-                    : "☁ Digital"
-            }
-
-        </span>
+        <span class="detail-badge availability-detail">
+    <img
+        src="${game.availability === "Disc" ? "images/icons/disc.svg" : "images/icons/cloud.svg"}"
+        class="availability-icon"
+        alt="${game.availability === "Disc" ? "Disc" : "Digital"}"
+    >
+    ${game.availability === "Disc" ? "Disc" : "Digital"}
+</span>
 
 
         <span
