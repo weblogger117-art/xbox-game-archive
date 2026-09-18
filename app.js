@@ -630,6 +630,8 @@ function updateActiveFilters() {
 
 
     let activeCount = 0;
+   const countDisplay =
+    document.getElementById("filterActiveCount");
 
 
     Object.entries(activeFilters).forEach(
@@ -688,13 +690,21 @@ function updateActiveFilters() {
 
     if (activeCount === 0) {
 
-        container.hidden = true;
+    container.hidden = true;
 
-    } else {
+    countDisplay.textContent =
+        "Keine Filter aktiv";
 
-        container.hidden = false;
+} else {
 
-    }
+    container.hidden = false;
+
+    countDisplay.textContent =
+        activeCount === 1
+            ? "1 Filter aktiv"
+            : `${activeCount} Filter aktiv`;
+
+}
 
 }
 
@@ -903,6 +913,56 @@ document
         closeGameDetail
     );
 
+/* =========================================================
+   FILTER AUF- UND ZUKLAPPEN
+   ========================================================= */
+
+const filterToggle =
+    document.getElementById("filterToggle");
+
+const filterContent =
+    document.getElementById("filterContent");
+
+const filterArrow =
+    document.getElementById("filterArrow");
+
+
+filterToggle.addEventListener(
+    "click",
+    () => {
+
+        const isOpen =
+            filterToggle.getAttribute(
+                "aria-expanded"
+            ) === "true";
+
+
+        if (isOpen) {
+
+            filterToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            filterContent.hidden = true;
+
+            filterArrow.textContent = "⌄";
+
+        } else {
+
+            filterToggle.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            filterContent.hidden = false;
+
+            filterArrow.textContent = "⌃";
+
+        }
+
+    }
+);
 
 /* =========================================================
    START
