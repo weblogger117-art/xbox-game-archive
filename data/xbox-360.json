@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "gears-of-war-3",
+    "title": "Gears of War 3",
+    "platform": "Xbox 360",
+    "fsk": 18,
+    "genre": "Third-Person-Shooter",
+    "availability": "Disc",
+    "couchCoop": true,
+    "year": 2011,
+    "developer": "Epic Games",
+    "description": "Gears of War 3 setzt die Geschichte der Delta Squad fort und führt den Kampf gegen die Locust und Lambent zu ihrem dramatischen Höhepunkt.",
+    "cover": "images/gears-of-war-3/cover.webp",
+    "screenshots": [
+      "images/gears-of-war-3/screen01.webp",
+      "images/gears-of-war-3/screen02.webp",
+      "images/gears-of-war-3/screen03.webp"
+    ]
+  }
+]
