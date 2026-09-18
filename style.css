@@ -2796,35 +2796,38 @@ button {
 }
 
 /* FSK-Farben */
+
 .fsk-badge,
 .fsk-detail {
-    color: #ffffff;
     font-weight: 700;
 }
 
-/* FSK 0 – Grün */
+/* FSK 0 – Hellgrau */
 .fsk-0 {
-    background: #16a34a;
+    background: #F2F2F2;
+    color: #111111;
 }
 
 /* FSK 6 – Gelb */
 .fsk-6 {
-    background: #facc15;
+    background: #FFE500;
     color: #111111;
 }
 
-/* FSK 12 – Orange */
+/* FSK 12 – Grün */
 .fsk-12 {
-    background: #f59e0b;
-    color: #111111;
+    background: #18A83A;
+    color: #ffffff;
 }
 
-/* FSK 16 – Rot */
+/* FSK 16 – Blau */
 .fsk-16 {
-    background: #dc2626;
+    background: #009FE3;
+    color: #ffffff;
 }
 
-/* FSK 18 – Dunkelrot */
+/* FSK 18 – Rot */
 .fsk-18 {
-    background: #991b1b;
+    background: #E30613;
+    color: #ffffff;
 }
