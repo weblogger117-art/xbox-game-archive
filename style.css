@@ -1165,3 +1165,540 @@ button {
     }
 
 }
+
+/* =========================================================
+   SPIEL-DETAILANSICHT
+   ========================================================= */
+
+.game-detail {
+    padding:
+        35px 0 90px;
+}
+
+
+/* ZURÜCK */
+
+.back-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 35px;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 999px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.back-button:hover {
+
+    background:
+        var(--surface-hover);
+
+    color:
+        white;
+
+    border-color:
+        rgba(
+            93,
+            194,
+            30,
+            0.4
+        );
+
+}
+
+
+/* DETAIL HEADER */
+
+.detail-header {
+
+    display: grid;
+
+    grid-template-columns:
+        280px
+        1fr;
+
+    gap: 45px;
+
+    margin-bottom: 65px;
+
+}
+
+
+/* COVER */
+
+.detail-cover {
+
+    width: 100%;
+
+    aspect-ratio:
+        2 / 3;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-large);
+
+    background:
+        var(--surface);
+
+    box-shadow:
+        0 25px 60px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+}
+
+
+.detail-cover img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* TEXT */
+
+.detail-main {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.detail-platform {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--xbox-green-light);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.detail-main h1 {
+
+    margin:
+        0 0 25px;
+
+    font-size:
+        clamp(
+            36px,
+            5vw,
+            64px
+        );
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+/* DETAIL META */
+
+.detail-meta {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        28px;
+
+}
+
+
+.detail-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        36px;
+
+    padding:
+        8px 13px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        999px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+.fsk-detail {
+
+    background:
+        #d9d9d9;
+
+    border-color:
+        #d9d9d9;
+
+    color:
+        #111;
+
+}
+
+
+.coop-yes {
+
+    border-color:
+        rgba(
+            93,
+            194,
+            30,
+            0.35
+        );
+
+    background:
+        var(--xbox-green-soft);
+
+    color:
+        var(--xbox-green-light);
+
+}
+
+
+.coop-no {
+
+    color:
+        var(--text-muted);
+
+}
+
+
+/* BESCHREIBUNG */
+
+.detail-description {
+
+    max-width:
+        760px;
+
+    margin:
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        16px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* DETAIL SECTION */
+
+.detail-section {
+
+    margin-top:
+        20px;
+
+}
+
+
+.detail-section h2 {
+
+    margin:
+        0 0 20px;
+
+    font-size:
+        22px;
+
+}
+
+
+/* SCREENSHOTS */
+
+.detail-screenshots {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap:
+        15px;
+
+}
+
+
+.detail-screenshots img {
+
+    width:
+        100%;
+
+    display:
+        block;
+
+    border-radius:
+        var(--radius-medium);
+
+    border:
+        1px solid var(--border);
+
+    background:
+        var(--surface);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.detail-screenshots img:first-child {
+
+    grid-column:
+        1 / -1;
+
+}
+
+
+.detail-screenshots img:hover {
+
+    transform:
+        scale(1.01);
+
+    border-color:
+        rgba(
+            93,
+            194,
+            30,
+            0.35
+        );
+
+}
+
+
+/* =========================================================
+   DETAIL – MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .game-detail {
+
+        padding:
+            25px 0 60px;
+
+    }
+
+
+    .back-button {
+
+        margin-bottom:
+            25px;
+
+    }
+
+
+    .detail-header {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            25px;
+
+        margin-bottom:
+            45px;
+
+    }
+
+
+    .detail-cover {
+
+        width:
+            min(
+                220px,
+                65%
+            );
+
+        align-self:
+            center;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .detail-main {
+
+        display:
+            block;
+
+    }
+
+
+    .detail-platform {
+
+        margin-bottom:
+            8px;
+
+    }
+
+
+    .detail-main h1 {
+
+        margin-bottom:
+            20px;
+
+        font-size:
+            36px;
+
+        line-height:
+            1.05;
+
+    }
+
+
+    .detail-meta {
+
+        gap:
+            7px;
+
+        margin-bottom:
+            22px;
+
+    }
+
+
+    .detail-badge {
+
+        min-height:
+            34px;
+
+        padding:
+            7px 11px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    .detail-description {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .detail-section h2 {
+
+        font-size:
+            20px;
+
+    }
+
+
+    .detail-screenshots {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            10px;
+
+    }
+
+
+    .detail-screenshots img:first-child {
+
+        grid-column:
+            auto;
+
+    }
+
+}
