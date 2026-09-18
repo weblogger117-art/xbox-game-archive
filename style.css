@@ -1702,3 +1702,254 @@ button {
     }
 
 }
+
+/* =========================================================
+   SCREENSHOT-GALERIE
+   ========================================================= */
+
+.screenshot-gallery {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   HAUPTBILD
+   ========================================================= */
+
+.screenshot-main {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    overflow: hidden;
+
+    background:
+        #101411;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-large);
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+}
+
+
+.screenshot-main img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   VORSCHAUBILDER
+   ========================================================= */
+
+.screenshot-thumbnails {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        12px;
+
+    margin-top:
+        12px;
+
+}
+
+
+.screenshot-thumbnail {
+
+    position: relative;
+
+    aspect-ratio:
+        16 / 9;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border:
+        2px solid transparent;
+
+    border-radius:
+        var(--radius-medium);
+
+    background:
+        var(--surface);
+
+    cursor: pointer;
+
+    opacity:
+        0.55;
+
+    transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.screenshot-thumbnail:hover {
+
+    opacity:
+        0.85;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.screenshot-thumbnail.active {
+
+    opacity:
+        1;
+
+    border-color:
+        var(--xbox-green-light);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(
+            93,
+            194,
+            30,
+            0.12
+        );
+
+}
+
+
+.screenshot-thumbnail img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   KEINE SCREENSHOTS
+   ========================================================= */
+
+.no-screenshots {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        250px;
+
+    padding:
+        30px;
+
+    color:
+        var(--text-secondary);
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-large);
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .screenshot-main {
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .screenshot-thumbnails {
+
+        display:
+            flex;
+
+        overflow-x:
+            auto;
+
+        gap:
+            9px;
+
+        padding:
+            2px 2px 8px;
+
+        scrollbar-width:
+            none;
+
+        -webkit-overflow-scrolling:
+            touch;
+
+    }
+
+
+    .screenshot-thumbnails::-webkit-scrollbar {
+
+        display:
+            none;
+
+    }
+
+
+    .screenshot-thumbnail {
+
+        flex:
+            0 0 120px;
+
+        border-radius:
+            10px;
+
+    }
+
+}
