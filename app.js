@@ -116,12 +116,9 @@ function displayGames(gameList) {
 
                 <div class="game-meta">
 
-                    <span
-                        class="fsk-badge"
-                        title="FSK ${game.fsk}"
-                    >
-                        ${game.fsk}
-                    </span>
+                    <span class="fsk-badge fsk-${game.fsk}" title="FSK ${game.fsk}">
+    ${game.fsk}
+</span>
 
 
                     <span
@@ -252,9 +249,9 @@ function openGameDetail(gameId) {
 
     meta.innerHTML = `
 
-        <span class="detail-badge fsk-detail">
-            FSK ${game.fsk}
-        </span>
+        <span class="detail-badge fsk-detail fsk-${game.fsk}">
+    FSK ${game.fsk}
+</span>
 
 
         <span class="detail-badge">
