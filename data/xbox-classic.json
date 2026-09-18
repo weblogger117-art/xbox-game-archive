@@ -1,1 +1,20 @@
-[]
+[
+  {
+  "id": "area-51",
+  "title": "Area 51",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Ego Shooter",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Midway Austin",
+  "description": "Area 51 ist ein Science-Fiction-Ego-Shooter, in dem der Spieler als Mitglied einer militärischen Spezialeinheit die geheimnisvolle Area 51 untersucht und dabei auf außerirdische Lebensformen und eine weitreichende Verschwörung stößt.",
+  "cover": "images/area-51/cover.webp",
+  "screenshots": [
+    "images/area-51/screen01.webp",
+    "images/area-51/screen02.webp",
+    "images/area-51/screen03.webp"
+  ]
+}
+]
