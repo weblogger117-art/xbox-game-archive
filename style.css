@@ -2831,3 +2831,12 @@ button {
     background: #E30613;
     color: #ffffff;
 }
+
+/* Verfügbarkeits-Symbole */
+.availability-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: inline-block;
+    flex-shrink: 0;
+}
