@@ -1,6 +1,7 @@
 let games = [];
 let currentGame = null;
 
+
 /* =========================================================
    AKTIVE FILTER
    ========================================================= */
@@ -19,7 +20,9 @@ let activeFilters = {
    ========================================================= */
 
 async function loadGames() {
+
     try {
+
         const response = await fetch("data/games.json");
 
         if (!response.ok) {
@@ -31,8 +34,14 @@ async function loadGames() {
         displayGames(games);
 
     } catch (error) {
-        console.error("Fehler beim Laden der Spiele:", error);
+
+        console.error(
+            "Fehler beim Laden der Spieldaten:",
+            error
+        );
+
     }
+
 }
 
 
@@ -42,12 +51,17 @@ async function loadGames() {
 
 function displayGames(gameList) {
 
-    const gamesGrid = document.getElementById("gamesGrid");
-    const counter = document.querySelector(".counter-number");
+    const gamesGrid =
+        document.getElementById("gamesGrid");
+
+    const counter =
+        document.querySelector(".counter-number");
+
 
     counter.textContent = gameList.length;
 
     gamesGrid.innerHTML = "";
+
 
     if (gameList.length === 0) {
 
@@ -58,35 +72,47 @@ function displayGames(gameList) {
         `;
 
         return;
+
     }
 
 
     gameList.forEach(game => {
 
-        const card = document.createElement("article");
+        const card =
+            document.createElement("article");
 
         card.className = "game-card";
 
+
         card.innerHTML = `
+
             <div class="game-cover">
+
                 <img
                     src="${game.cover}"
                     alt="${game.title}"
                     loading="lazy"
                 >
+
             </div>
+
 
             <div class="game-info">
 
-                <h3>${game.title}</h3>
+                <h3>
+                    ${game.title}
+                </h3>
+
 
                 <p class="game-platform">
                     ${game.platform}
                 </p>
 
+
                 <p class="game-genre">
                     ${game.genre}
                 </p>
+
 
                 <div class="game-meta">
 
@@ -96,6 +122,7 @@ function displayGames(gameList) {
                     >
                         ${game.fsk}
                     </span>
+
 
                     <span
                         class="meta-icon"
@@ -107,6 +134,7 @@ function displayGames(gameList) {
                                 : "☁"
                         }
                     </span>
+
 
                     ${
                         game.couchCoop
@@ -124,21 +152,24 @@ function displayGames(gameList) {
                 </div>
 
             </div>
+
         `;
 
 
-        /* Spiel anklickbar machen */
+        /* =====================================================
+           SPIEL ÖFFNEN
+           ===================================================== */
 
-        card.addEventListener("click", function () {
-
-            openGameDetail(game.id);
-
-        });
+        card.addEventListener(
+            "click",
+            () => openGameDetail(game.id)
+        );
 
 
         gamesGrid.appendChild(card);
 
     });
+
 }
 
 
@@ -148,50 +179,88 @@ function displayGames(gameList) {
 
 function openGameDetail(gameId) {
 
-    const game = games.find(item => item.id === gameId);
+    const game =
+        games.find(
+            item => item.id === gameId
+        );
+
 
     if (!game) {
         return;
     }
 
+
     currentGame = game;
 
 
-    document.querySelector(".hero").hidden = true;
-    document.querySelector(".search-section").hidden = true;
-    document.querySelector(".filters").hidden = true;
-    document.querySelector(".game-counter").hidden = true;
-    document.querySelector(".games-section").hidden = true;
+    /* Sammlung ausblenden */
+
+    document
+        .querySelector(".hero")
+        .hidden = true;
+
+    document
+        .querySelector(".search-section")
+        .hidden = true;
+
+    document
+        .querySelector(".filters")
+        .hidden = true;
+
+    document
+        .querySelector(".game-counter")
+        .hidden = true;
+
+    document
+        .querySelector(".games-section")
+        .hidden = true;
 
 
-    const detail = document.getElementById("gameDetail");
+    /* Detailansicht anzeigen */
+
+    const detail =
+        document.getElementById("gameDetail");
 
     detail.hidden = false;
 
 
     /* Cover */
 
-    const cover = document.getElementById("detailCover");
+    const cover =
+        document.getElementById("detailCover");
 
     cover.src = game.cover;
     cover.alt = game.title;
 
 
-    /* Grunddaten */
+    /* Plattform */
 
-    document.getElementById("detailPlatform").textContent =
-        game.platform;
-
-    document.getElementById("detailTitle").textContent =
-        game.title;
-
-    document.getElementById("detailDescription").textContent =
-        game.description;
+    document
+        .getElementById("detailPlatform")
+        .textContent = game.platform;
 
 
-    /* Meta-Daten */
+    /* Titel */
 
-    const meta = document.getElementById("detailMeta");
+    document
+        .getElementById("detailTitle")
+        .textContent = game.title;
+
+
+    /* Beschreibung */
+
+    document
+        .getElementById("detailDescription")
+        .textContent = game.description;
+
+
+    /* =====================================================
+       META-DATEN
+       ===================================================== */
+
+    const meta =
+        document.getElementById("detailMeta");
+
 
     meta.innerHTML = `
 
@@ -199,9 +268,11 @@ function openGameDetail(gameId) {
             FSK ${game.fsk}
         </span>
 
+
         <span class="detail-badge">
             ${game.genre}
         </span>
+
 
         <span class="detail-badge">
 
@@ -213,12 +284,12 @@ function openGameDetail(gameId) {
 
         </span>
 
+
         <span
-            class="detail-badge ${
-                game.couchCoop
-                    ? "coop-yes"
-                    : "coop-no"
-            }"
+            class="
+                detail-badge
+                ${game.couchCoop ? "coop-yes" : "coop-no"}
+            "
         >
 
             🎮 Couch-Coop:
@@ -239,7 +310,10 @@ function openGameDetail(gameId) {
        ===================================================== */
 
     const screenshots =
-        document.getElementById("detailScreenshots");
+        document.getElementById(
+            "detailScreenshots"
+        );
+
 
     screenshots.innerHTML = "";
 
@@ -264,6 +338,8 @@ function openGameDetail(gameId) {
             "screenshot-gallery";
 
 
+        /* Hauptbild */
+
         const mainContainer =
             document.createElement("div");
 
@@ -284,8 +360,12 @@ function openGameDetail(gameId) {
             "lazy";
 
 
-        mainContainer.appendChild(mainImage);
+        mainContainer.appendChild(
+            mainImage
+        );
 
+
+        /* Vorschaubilder */
 
         const thumbnails =
             document.createElement("div");
@@ -329,12 +409,16 @@ function openGameDetail(gameId) {
                     "lazy";
 
 
-                thumbnail.appendChild(image);
+                thumbnail.appendChild(
+                    image
+                );
 
+
+                /* Screenshot wechseln */
 
                 thumbnail.addEventListener(
                     "click",
-                    function () {
+                    () => {
 
                         mainImage.src =
                             screenshot;
@@ -388,10 +472,13 @@ function openGameDetail(gameId) {
     }
 
 
+    /* Nach oben */
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 
@@ -401,30 +488,30 @@ function openGameDetail(gameId) {
 
 function closeGameDetail() {
 
-    document.getElementById(
-        "gameDetail"
-    ).hidden = true;
+    document
+        .getElementById("gameDetail")
+        .hidden = true;
 
 
-    document.querySelector(
-        ".hero"
-    ).hidden = false;
+    document
+        .querySelector(".hero")
+        .hidden = false;
 
-    document.querySelector(
-        ".search-section"
-    ).hidden = false;
+    document
+        .querySelector(".search-section")
+        .hidden = false;
 
-    document.querySelector(
-        ".filters"
-    ).hidden = false;
+    document
+        .querySelector(".filters")
+        .hidden = false;
 
-    document.querySelector(
-        ".game-counter"
-    ).hidden = false;
+    document
+        .querySelector(".game-counter")
+        .hidden = false;
 
-    document.querySelector(
-        ".games-section"
-    ).hidden = false;
+    document
+        .querySelector(".games-section")
+        .hidden = false;
 
 
     currentGame = null;
@@ -434,6 +521,7 @@ function closeGameDetail() {
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 
@@ -444,7 +532,10 @@ function closeGameDetail() {
 function applyFilters() {
 
     const searchInput =
-        document.getElementById("searchInput");
+        document.getElementById(
+            "searchInput"
+        );
+
 
     const searchTerm =
         searchInput.value
@@ -525,6 +616,7 @@ function applyFilters() {
 
 
     displayGames(filteredGames);
+
 }
 
 
@@ -536,6 +628,7 @@ document
     .querySelectorAll(".filter-buttons")
     .forEach(filterGroup => {
 
+
         const groupName =
             filterGroup.dataset.filterGroup;
 
@@ -544,12 +637,14 @@ document
             .querySelectorAll(".filter-button")
             .forEach(button => {
 
+
                 button.addEventListener(
                     "click",
-                    function () {
+                    () => {
 
 
-                        /* Aktiven Button setzen */
+                        /* Alle anderen Buttons
+                           dieser Gruppe deaktivieren */
 
                         filterGroup
                             .querySelectorAll(
@@ -563,6 +658,8 @@ document
 
                             });
 
+
+                        /* Gewählten Button aktivieren */
 
                         button.classList.add(
                             "active"
