@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "forza-horizon-5",
+    "title": "Forza Horizon 5",
+    "platform": "Xbox Series",
+    "fsk": 12,
+    "genre": "Racer",
+    "availability": "Digital",
+    "couchCoop": false,
+    "year": 2021,
+    "developer": "Playground Games",
+    "description": "Forza Horizon 5 bringt das Horizon-Festival nach Mexiko und verbindet offene Welt, Rennen, Fahrzeuge und eine große Auswahl an Aktivitäten.",
+    "cover": "images/forza-horizon-5/cover.webp",
+    "screenshots": [
+      "images/forza-horizon-5/screen01.webp",
+      "images/forza-horizon-5/screen02.webp",
+      "images/forza-horizon-5/screen03.webp"
+    ]
+  }
+]
