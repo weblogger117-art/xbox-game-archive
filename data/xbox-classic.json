@@ -17,4 +17,22 @@
     "images/area-51/screen03.webp"
   ]
 }
+  {
+  "id": "beyond-good-and-evil",
+  "title": "Beyond Good & Evil",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "Ubisoft Montpellier",
+  "description": "Als Reporterin Jade untersucht der Spieler auf dem Planeten Hillys mysteriöse außerirdische Angriffe und deckt dabei eine weitreichende Verschwörung auf.",
+  "cover": "images/beyond-good-and-evil/cover.webp",
+  "screenshots": [
+    "images/beyond-good-and-evil/screen01.webp",
+    "images/beyond-good-and-evil/screen02.webp",
+    "images/beyond-good-and-evil/screen03.webp"
+  ]
+}
 ]
