@@ -196,5 +196,23 @@
     "images/dead-or-alive-xtreme-beach-volleyball/screen02.webp",
     "images/dead-or-alive-xtreme-beach-volleyball/screen03.webp"
   ]
+},
+  {
+  "id": "dr-muto",
+  "title": "Dr. Muto",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2002,
+  "developer": "Midway Games",
+  "description": "Dr. Muto ist ein verrückter Wissenschaftler, der nach einer katastrophalen Explosion seine Heimatwelt retten muss. Mit seinen Erfindungen und der Fähigkeit, sich in verschiedene Kreaturen zu verwandeln, kämpft er sich durch eine abgedrehte Science-Fiction-Welt.",
+  "cover": "images/dr-muto/cover.webp",
+  "screenshots": [
+    "images/dr-muto/screen01.webp",
+    "images/dr-muto/screen02.webp",
+    "images/dr-muto/screen03.webp"
+  ]
 }
 ]
