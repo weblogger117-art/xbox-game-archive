@@ -250,5 +250,23 @@
     "images/doom-3/screen02.webp",
     "images/doom-3/screen03.webp"
   ]
+},
+  {
+  "id": "enclave",
+  "title": "Enclave",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2002,
+  "developer": "Starbreeze Studios",
+  "description": "Enclave ist ein actionreiches Fantasy-Abenteuer, in dem sich der Spieler durch eine vom Krieg zwischen den Mächten von Celenheim und Dreg'Atar geprägte Welt kämpft. Je nach gewählter Seite stehen unterschiedliche Charaktere, Fähigkeiten und Missionen zur Verfügung.",
+  "cover": "images/enclave/cover.webp",
+  "screenshots": [
+    "images/enclave/screen01.webp",
+    "images/enclave/screen02.webp",
+    "images/enclave/screen03.webp"
+  ]
 }
 ]
