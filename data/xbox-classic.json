@@ -178,5 +178,23 @@
     "images/dead-or-alive-3/screen02.webp",
     "images/dead-or-alive-3/screen03.webp"
   ]
+},
+  {
+  "id": "dead-or-alive-xtreme-beach-volleyball",
+  "title": "Dead or Alive Xtreme Beach Volleyball",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Sport",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2003,
+  "developer": "Team Ninja",
+  "description": "Dead or Alive Xtreme Beach Volleyball verbindet Beachvolleyball mit Urlaubs- und Freizeitaktivitäten. Die Spieler treten in Zweierteams an, verbessern ihre Beziehungen zu anderen Charakteren und nehmen an verschiedenen Aktivitäten auf einer tropischen Insel teil.",
+  "cover": "images/dead-or-alive-xtreme-beach-volleyball/cover.webp",
+  "screenshots": [
+    "images/dead-or-alive-xtreme-beach-volleyball/screen01.webp",
+    "images/dead-or-alive-xtreme-beach-volleyball/screen02.webp",
+    "images/dead-or-alive-xtreme-beach-volleyball/screen03.webp"
+  ]
 }
 ]
