@@ -70,5 +70,23 @@
     "images/blood-omen-2/screen02.webp",
     "images/blood-omen-2/screen03.webp"
   ]
+},
+  {
+  "id": "cold-fear",
+  "title": "Cold Fear",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Survival-Horror",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Darkworks",
+  "description": "Als US-Küstenwache Tom Hansen untersucht der Spieler ein mysteriöses Schiff in der Beringsee und gerät in einen Kampf ums Überleben gegen gefährliche Kreaturen und eine unheimliche Bedrohung.",
+  "cover": "images/cold-fear/cover.webp",
+  "screenshots": [
+    "images/cold-fear/screen01.webp",
+    "images/cold-fear/screen02.webp",
+    "images/cold-fear/screen03.webp"
+  ]
 }
 ]
