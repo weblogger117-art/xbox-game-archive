@@ -142,5 +142,23 @@
     "images/conker-live-and-reloaded/screen02.webp",
     "images/conker-live-and-reloaded/screen03.webp"
   ]
+},
+  {
+  "id": "dead-or-alive-ultimate",
+  "title": "Dead or Alive Ultimate",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Beat 'em up",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2004,
+  "developer": "Team Ninja",
+  "description": "Dead or Alive Ultimate enthält überarbeitete Versionen von Dead or Alive und Dead or Alive 2 und bietet schnelle, actionreiche Kämpfe mit zahlreichen bekannten Charakteren der Serie.",
+  "cover": "images/dead-or-alive-ultimate/cover.webp",
+  "screenshots": [
+    "images/dead-or-alive-ultimate/screen01.webp",
+    "images/dead-or-alive-ultimate/screen02.webp",
+    "images/dead-or-alive-ultimate/screen03.webp"
+  ]
 }
 ]
