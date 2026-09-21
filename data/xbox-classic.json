@@ -52,5 +52,23 @@
     "images/blood-wake/screen02.webp",
     "images/blood-wake/screen03.webp"
   ]
+},
+  {
+  "id": "blood-omen-2",
+  "title": "Blood Omen 2",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2002,
+  "developer": "Crystal Dynamics",
+  "description": "Als Vampir Kain kehrt der Spieler in die düstere Welt von Nosgoth zurück und kämpft sich durch eine von Vampiren und Menschen geprägte Welt. Dabei setzt Kain seine übernatürlichen Fähigkeiten und verschiedene Vampirkräfte ein.",
+  "cover": "images/blood-omen-2/cover.webp",
+  "screenshots": [
+    "images/blood-omen-2/screen01.webp",
+    "images/blood-omen-2/screen02.webp",
+    "images/blood-omen-2/screen03.webp"
+  ]
 }
 ]
