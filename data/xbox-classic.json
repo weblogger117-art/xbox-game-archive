@@ -214,5 +214,23 @@
     "images/dr-muto/screen02.webp",
     "images/dr-muto/screen03.webp"
   ]
+},
+  {
+  "id": "das-ding",
+  "title": "Das Ding",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Survival-Horror",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2002,
+  "developer": "Computer Artworks",
+  "description": "Das Ding setzt die Geschichte des gleichnamigen Horrorfilms fort. Als Mitglied eines US-Spezialteams untersucht der Spieler die verlassenen Forschungsstationen in der Antarktis und kämpft gegen eine tödliche außerirdische Lebensform.",
+  "cover": "images/das-ding/cover.webp",
+  "screenshots": [
+    "images/das-ding/screen01.webp",
+    "images/das-ding/screen02.webp",
+    "images/das-ding/screen03.webp"
+  ]
 }
 ]
