@@ -124,5 +124,23 @@
     "images/crazy-taxi-3/screen02.webp",
     "images/crazy-taxi-3/screen03.webp"
   ]
+},
+  {
+  "id": "conker-live-and-reloaded",
+  "title": "Conker: Live & Reloaded",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2005,
+  "developer": "Rare",
+  "description": "Conker: Live & Reloaded ist ein schwarzhumoriges Action-Adventure, in dem das Eichhörnchen Conker nach einer durchzechten Nacht versucht, seinen Weg nach Hause zu finden. Dabei erlebt er eine verrückte Reise voller skurriler Charaktere, absurder Situationen und schwarzem Humor.",
+  "cover": "images/conker-live-and-reloaded/cover.webp",
+  "screenshots": [
+    "images/conker-live-and-reloaded/screen01.webp",
+    "images/conker-live-and-reloaded/screen02.webp",
+    "images/conker-live-and-reloaded/screen03.webp"
+  ]
 }
 ]
