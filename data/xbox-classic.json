@@ -106,5 +106,23 @@
     "images/crimson-skies/screen02.webp",
     "images/crimson-skies/screen03.webp"
   ]
+},
+  {
+  "id": "crazy-taxi-3",
+  "title": "Crazy Taxi 3: High Roller",
+  "platform": "Xbox Classic",
+  "fsk": 6,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2002,
+  "developer": "Hitmaker",
+  "description": "In Crazy Taxi 3: High Roller rast der Spieler als Taxifahrer durch verschiedene Städte und versucht, seine Fahrgäste möglichst schnell und spektakulär ans Ziel zu bringen. Neben bekannten Schauplätzen aus den Vorgängern bietet das Spiel neue Fahrer, Fahrzeuge und Herausforderungen.",
+  "cover": "images/crazy-taxi-3/cover.webp",
+  "screenshots": [
+    "images/crazy-taxi-3/screen01.webp",
+    "images/crazy-taxi-3/screen02.webp",
+    "images/crazy-taxi-3/screen03.webp"
+  ]
 }
 ]
