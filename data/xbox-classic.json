@@ -88,5 +88,23 @@
     "images/cold-fear/screen02.webp",
     "images/cold-fear/screen03.webp"
   ]
+},
+  {
+  "id": "crimson-skies-high-road-to-revenge",
+  "title": "Crimson Skies: High Road to Revenge",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Flight",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2003,
+  "developer": "FASA Studio",
+  "description": "Als Luftpirat Nathan Zachary übernimmt der Spieler das Steuer verschiedener Kampfflugzeuge und liefert sich actionreiche Luftkämpfe über einer alternativen Version der Vereinigten Staaten. Neben Missionen in der Luft stehen auch spektakuläre Verfolgungsjagden und Luftpiraten-Abenteuer auf dem Programm.",
+  "cover": "images/crimson-skies/cover.webp",
+  "screenshots": [
+    "images/crimson-skies/screen01.webp",
+    "images/crimson-skies/screen02.webp",
+    "images/crimson-skies/screen03.webp"
+  ]
 }
 ]
