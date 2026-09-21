@@ -160,5 +160,23 @@
     "images/dead-or-alive-ultimate/screen02.webp",
     "images/dead-or-alive-ultimate/screen03.webp"
   ]
+},
+  {
+  "id": "dead-or-alive-3",
+  "title": "Dead or Alive 3",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Beat 'em up",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2001,
+  "developer": "Team Ninja",
+  "description": "Dead or Alive 3 ist ein schnelles 3D-Kampfspiel mit zahlreichen Kämpfern, interaktiven Arenen und einem auf Konter, Würfe und schnelle Angriffe ausgelegten Kampfsystem.",
+  "cover": "images/dead-or-alive-3/cover.webp",
+  "screenshots": [
+    "images/dead-or-alive-3/screen01.webp",
+    "images/dead-or-alive-3/screen02.webp",
+    "images/dead-or-alive-3/screen03.webp"
+  ]
 }
 ]
