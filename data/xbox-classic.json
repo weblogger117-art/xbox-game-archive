@@ -232,5 +232,23 @@
     "images/das-ding/screen02.webp",
     "images/das-ding/screen03.webp"
   ]
+},
+  {
+  "id": "doom-3",
+  "title": "Doom 3",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Ego Shooter",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "id Software",
+  "description": "Doom 3 führt den Spieler auf die Forschungsstation des UAC-Konzerns auf dem Mars, wo ein fehlgeschlagenes Experiment ein Portal zur Hölle geöffnet hat. In dunklen Korridoren stellt sich der Spieler dämonischen Kreaturen und einer immer größer werdenden Bedrohung.",
+  "cover": "images/doom-3/cover.webp",
+  "screenshots": [
+    "images/doom-3/screen01.webp",
+    "images/doom-3/screen02.webp",
+    "images/doom-3/screen03.webp"
+  ]
 }
 ]
