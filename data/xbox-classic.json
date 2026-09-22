@@ -484,5 +484,23 @@
     "images/halo-combat-evolved/screen02.webp",
     "images/halo-combat-evolved/screen03.webp"
   ]
+},
+  {
+  "id": "halo-2",
+  "title": "Halo 2",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Ego Shooter",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2004,
+  "developer": "Bungie Studios",
+  "description": "Halo 2 setzt die Geschichte des Master Chief nach den Ereignissen von Halo: Combat Evolved fort. Im Kampf gegen die Allianz und eine neue Bedrohung reist der Spieler zwischen verschiedenen Schauplätzen und übernimmt dabei auch die Rolle des Gebieter. Neben einer umfangreichen Kampagne bietet Halo 2 zahlreiche Waffen, Fahrzeuge und intensive Gefechte.",
+  "cover": "images/halo-2/cover.webp",
+  "screenshots": [
+    "images/halo-2/screen01.webp",
+    "images/halo-2/screen02.webp",
+    "images/halo-2/screen03.webp"
+  ]
 }
 ]
