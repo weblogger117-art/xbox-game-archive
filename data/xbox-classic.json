@@ -520,5 +520,23 @@
     "images/indiana-jones-kaisergruft/screen02.webp",
     "images/indiana-jones-kaisergruft/screen03.webp"
   ]
+},
+  {
+  "id": "jet-set-radio-future",
+  "title": "Jet Set Radio Future",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2002,
+  "developer": "Smilebit",
+  "description": "Jet Set Radio Future führt den Spieler in das futuristische Tokyo-to, wo die Graffiti-Gang GGs mit Inline-Skates durch die Stadt rast. Neben spektakulären Tricks und Grind-Manövern gilt es, Graffiti zu sprühen, rivalisierende Gangs herauszufordern und sich gegen die Polizei und die geheimnisvolle Rokkaku Group zu behaupten.",
+  "cover": "images/jet-set-radio-future/cover.webp",
+  "screenshots": [
+    "images/jet-set-radio-future/screen01.webp",
+    "images/jet-set-radio-future/screen02.webp",
+    "images/jet-set-radio-future/screen03.webp"
+  ]
 }
 ]
