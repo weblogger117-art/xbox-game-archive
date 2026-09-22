@@ -358,5 +358,23 @@
     "images/fluch-der-karibik/screen02.webp",
     "images/fluch-der-karibik/screen03.webp"
   ]
+},
+  {
+  "id": "far-cry-instincts",
+  "title": "Far Cry Instincts",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Ego Shooter",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2005,
+  "developer": "Ubisoft Montreal",
+  "description": "Far Cry Instincts ist ein actionreicher Ego-Shooter, in dem der ehemalige Elitesoldat Jack Carver auf einer tropischen Insel ums Überleben kämpft. Neben Schusswaffen stehen ihm auch besondere Fähigkeiten zur Verfügung, die durch eine experimentelle Behandlung hervorgerufen wurden.",
+  "cover": "images/far-cry-instincts/cover.webp",
+  "screenshots": [
+    "images/far-cry-instincts/screen01.webp",
+    "images/far-cry-instincts/screen02.webp",
+    "images/far-cry-instincts/screen03.webp"
+  ]
 }
 ]
