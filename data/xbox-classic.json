@@ -466,5 +466,23 @@
     "images/gta-san-andreas/screen02.webp",
     "images/gta-san-andreas/screen03.webp"
   ]
+},
+  {
+  "id": "halo-combat-evolved",
+  "title": "Halo: Combat Evolved",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Ego Shooter",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2002,
+  "developer": "Bungie Studios",
+  "description": "Halo: Combat Evolved begleitet den Master Chief auf seinem Kampf gegen die außerirdische Allianz auf dem geheimnisvollen Ringplaneten Halo. Mit unterschiedlichen Waffen, Fahrzeugen und taktischen Möglichkeiten kämpft sich der Spieler durch weitläufige Landschaften und entdeckt nach und nach die Geheimnisse der ringförmigen Welt.",
+  "cover": "images/halo-combat-evolved/cover.webp",
+  "screenshots": [
+    "images/halo-combat-evolved/screen01.webp",
+    "images/halo-combat-evolved/screen02.webp",
+    "images/halo-combat-evolved/screen03.webp"
+  ]
 }
 ]
