@@ -430,5 +430,23 @@
     "images/gta-3/screen02.webp",
     "images/gta-3/screen03.webp"
   ]
+},
+  {
+  "id": "gta-vice-city",
+  "title": "GTA: Vice City",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "Rockstar North",
+  "description": "GTA: Vice City führt den Spieler in die neonbeleuchtete Unterwelt des Miami-inspirierten Vice City der 1980er-Jahre. Als Tommy Vercetti arbeitet sich der Spieler durch die kriminellen Strukturen der Stadt, übernimmt Aufträge, baut sein eigenes Imperium auf und erkundet eine große offene Spielwelt mit zahlreichen Fahrzeugen und Waffen.",
+  "cover": "images/gta-vice-city/cover.webp",
+  "screenshots": [
+    "images/gta-vice-city/screen01.webp",
+    "images/gta-vice-city/screen02.webp",
+    "images/gta-vice-city/screen03.webp"
+  ]
 }
 ]
