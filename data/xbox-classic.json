@@ -286,5 +286,23 @@
     "images/fable/screen02.webp",
     "images/fable/screen03.webp"
   ]
+},
+  {
+  "id": "forza-motorsport",
+  "title": "Forza Motorsport",
+  "platform": "Xbox Classic",
+  "fsk": 0,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2005,
+  "developer": "Turn 10 Studios",
+  "description": "Forza Motorsport ist eine realistische Rennsimulation mit einer großen Auswahl an Fahrzeugen und Rennstrecken. Neben umfangreichen Einzelspieler-Rennen bietet das Spiel zahlreiche Möglichkeiten für Mehrspieler-Rennen und die individuelle Anpassung der Fahrzeuge.",
+  "cover": "images/forza-motorsport/cover.webp",
+  "screenshots": [
+    "images/forza-motorsport/screen01.webp",
+    "images/forza-motorsport/screen02.webp",
+    "images/forza-motorsport/screen03.webp"
+  ]
 }
 ]
