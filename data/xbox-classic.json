@@ -304,5 +304,23 @@
     "images/forza-motorsport/screen02.webp",
     "images/forza-motorsport/screen03.webp"
   ]
+},
+  {
+  "id": "futurama",
+  "title": "Futurama",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "Unique Development Studios",
+  "description": "Futurama ist ein actionreiches Abenteuer, das die bekannten Charaktere aus der gleichnamigen Serie in eine neue Geschichte versetzt. Als Fry, Leela und Bender kämpft sich der Spieler durch verschiedene Schauplätze des Futurama-Universums und versucht, die Zukunft vor einer großen Bedrohung zu retten.",
+  "cover": "images/futurama/cover.webp",
+  "screenshots": [
+    "images/futurama/screen01.webp",
+    "images/futurama/screen02.webp",
+    "images/futurama/screen03.webp"
+  ]
 }
 ]
