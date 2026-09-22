@@ -412,5 +412,23 @@
     "images/gun/screen02.webp",
     "images/gun/screen03.webp"
   ]
+},
+  {
+  "id": "gta-3",
+  "title": "GTA 3",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2001,
+  "developer": "DMA Design",
+  "description": "GTA 3 versetzt den Spieler in die düstere Großstadt Liberty City. Als Claude arbeitet er sich durch die Unterwelt der Stadt, übernimmt Aufträge für verschiedene kriminelle Organisationen und baut sich dabei seinen eigenen Ruf auf. Neben den Missionen stehen zahlreiche Fahrzeuge, Waffen und eine frei erkundbare Spielwelt zur Verfügung.",
+  "cover": "images/gta-3/cover.webp",
+  "screenshots": [
+    "images/gta-3/screen01.webp",
+    "images/gta-3/screen02.webp",
+    "images/gta-3/screen03.webp"
+  ]
 }
 ]
