@@ -322,5 +322,23 @@
     "images/futurama/screen02.webp",
     "images/futurama/screen03.webp"
   ]
+},
+  {
+  "id": "freaky-flyers",
+  "title": "Freaky Flyers",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Flight",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2003,
+  "developer": "Point of View",
+  "description": "Freaky Flyers ist ein actionreiches Flugspiel mit verrückten Piloten, skurrilen Flugzeugen und humorvollen Missionen. Neben verschiedenen Einzelspieler-Abenteuern bietet das Spiel schnelle Luftkämpfe und Mehrspieler-Action.",
+  "cover": "images/freaky-flyers/cover.webp",
+  "screenshots": [
+    "images/freaky-flyers/screen01.webp",
+    "images/freaky-flyers/screen02.webp",
+    "images/freaky-flyers/screen03.webp"
+  ]
 }
 ]
