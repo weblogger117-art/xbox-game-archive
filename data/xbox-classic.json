@@ -574,5 +574,23 @@
     "images/kung-fu-chaos/screen02.webp",
     "images/kung-fu-chaos/screen03.webp"
   ]
+},
+  {
+  "id": "metal-slug-3",
+  "title": "Metal Slug 3",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2004,
+  "developer": "SNK Playmore",
+  "description": "Metal Slug 3 ist ein rasanter 2D-Action-Shooter, in dem sich die Spieler mit zahlreichen Waffen und Fahrzeugen durch abwechslungsreiche und chaotische Levels kämpfen. Neben feindlichen Soldaten warten riesige Bosse, Aliens und jede Menge explosiver Überraschungen auf die Spieler.",
+  "cover": "images/metal-slug-3/cover.webp",
+  "screenshots": [
+    "images/metal-slug-3/screen01.webp",
+    "images/metal-slug-3/screen02.webp",
+    "images/metal-slug-3/screen03.webp"
+  ]
 }
 ]
