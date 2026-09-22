@@ -538,5 +538,23 @@
     "images/jet-set-radio-future/screen02.webp",
     "images/jet-set-radio-future/screen03.webp"
   ]
+},
+  {
+  "id": "jade-empire",
+  "title": "Jade Empire",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Rollenspiele",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "BioWare",
+  "description": "Jade Empire ist ein actionreiches Rollenspiel in einer von der chinesischen Mythologie inspirierten Welt. Als Schüler einer Kampfkunstschule begibt sich der Spieler auf eine Reise voller Martial-Arts-Kämpfe, mystischer Kräfte und folgenreicher Entscheidungen. Der eigene Charakter entwickelt neue Kampfstile und Fähigkeiten und beeinflusst durch seine Entscheidungen den Verlauf der Geschichte.",
+  "cover": "images/jade-empire/cover.webp",
+  "screenshots": [
+    "images/jade-empire/screen01.webp",
+    "images/jade-empire/screen02.webp",
+    "images/jade-empire/screen03.webp"
+  ]
 }
 ]
