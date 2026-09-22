@@ -394,5 +394,23 @@
     "images/fuzion-frenzy/screen02.webp",
     "images/fuzion-frenzy/screen03.webp"
   ]
+},
+  {
+  "id": "gun",
+  "title": "GUN",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Neversoft",
+  "description": "GUN ist ein actionreiches Western-Abenteuer, in dem der Spieler als Colton White durch den amerikanischen Westen des 19. Jahrhunderts zieht. Zwischen Schießereien, Kopfgeldjagden und offenen Landschaften folgt Colton einer persönlichen Geschichte rund um Rache, Verrat und eine geheimnisvolle Vergangenheit.",
+  "cover": "images/gun/cover.webp",
+  "screenshots": [
+    "images/gun/screen01.webp",
+    "images/gun/screen02.webp",
+    "images/gun/screen03.webp"
+  ]
 }
 ]
