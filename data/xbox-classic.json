@@ -340,5 +340,23 @@
     "images/freaky-flyers/screen02.webp",
     "images/freaky-flyers/screen03.webp"
   ]
+},
+  {
+  "id": "fluch-der-karibik",
+  "title": "Fluch der Karibik",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "Akella",
+  "description": "Fluch der Karibik ist ein actionreiches Piratenabenteuer, in dem der Spieler als Nathaniel Hawk durch die Karibik segelt, Handel treibt, Schiffe bekämpft und zahlreiche Abenteuer an Land und auf See erlebt.",
+  "cover": "images/fluch-der-karibik/cover.webp",
+  "screenshots": [
+    "images/fluch-der-karibik/screen01.webp",
+    "images/fluch-der-karibik/screen02.webp",
+    "images/fluch-der-karibik/screen03.webp"
+  ]
 }
 ]
