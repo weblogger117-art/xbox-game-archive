@@ -268,5 +268,23 @@
     "images/enclave/screen02.webp",
     "images/enclave/screen03.webp"
   ]
+},
+  {
+  "id": "fable",
+  "title": "Fable",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Rollenspiele",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2004,
+  "developer": "Lionhead Studios",
+  "description": "In Fable übernimmt der Spieler die Rolle eines jungen Helden, dessen Lebensweg durch seine eigenen Entscheidungen geprägt wird. Ausbildung, Kämpfe und zahlreiche Entscheidungen beeinflussen die Entwicklung des Charakters und seinen Ruf in der Welt von Albion.",
+  "cover": "images/fable/cover.webp",
+  "screenshots": [
+    "images/fable/screen01.webp",
+    "images/fable/screen02.webp",
+    "images/fable/screen03.webp"
+  ]
 }
 ]
