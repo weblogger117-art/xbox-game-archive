@@ -448,5 +448,23 @@
     "images/gta-vice-city/screen02.webp",
     "images/gta-vice-city/screen03.webp"
   ]
+},
+  {
+  "id": "gta-san-andreas",
+  "title": "GTA: San Andreas",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Rockstar North",
+  "description": "GTA: San Andreas führt den Spieler in den amerikanischen Bundesstaat San Andreas der frühen 1990er-Jahre. Als Carl Johnson, genannt CJ, kehrt der Spieler nach Los Santos zurück und gerät erneut in die Konflikte seiner alten Gang. Die Geschichte führt durch drei große Städte und eine weitläufige Spielwelt voller Missionen, Fahrzeuge und zahlreicher Aktivitäten.",
+  "cover": "images/gta-san-andreas/cover.webp",
+  "screenshots": [
+    "images/gta-san-andreas/screen01.webp",
+    "images/gta-san-andreas/screen02.webp",
+    "images/gta-san-andreas/screen03.webp"
+  ]
 }
 ]
