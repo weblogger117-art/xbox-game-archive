@@ -556,5 +556,23 @@
     "images/jade-empire/screen02.webp",
     "images/jade-empire/screen03.webp"
   ]
+},
+  {
+  "id": "kung-fu-chaos",
+  "title": "Kung Fu Chaos",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Beat 'em up",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2003,
+  "developer": "Just Add Monsters",
+  "description": "Kung Fu Chaos ist ein humorvolles Kampfspiel, in dem bis zu vier Spieler in verrückten Kung-Fu-Arenen gegeneinander antreten. Mit verschiedenen Kämpfern, spektakulären Angriffen und abwechslungsreichen Herausforderungen verbindet das Spiel klassische Martial-Arts-Action mit viel schwarzem Humor und chaotischen Mehrspieler-Kämpfen.",
+  "cover": "images/kung-fu-chaos/cover.webp",
+  "screenshots": [
+    "images/kung-fu-chaos/screen01.webp",
+    "images/kung-fu-chaos/screen02.webp",
+    "images/kung-fu-chaos/screen03.webp"
+  ]
 }
 ]
