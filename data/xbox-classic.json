@@ -502,5 +502,23 @@
     "images/halo-2/screen02.webp",
     "images/halo-2/screen03.webp"
   ]
+},
+  {
+  "id": "indiana-jones-und-die-legende-der-kaisergruft",
+  "title": "Indiana Jones und die Legende der Kaisergruft",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "The Collective",
+  "description": "Indiana Jones und die Legende der Kaisergruft begleitet den berühmten Archäologen auf einer actionreichen Reise rund um die Welt. Auf der Suche nach einem geheimnisvollen chinesischen Artefakt kämpft sich Indiana Jones durch antike Ruinen, gefährliche Tempelanlagen und feindliche Truppen. Neben Schusswaffen stehen ihm dabei vor allem seine Fäuste und seine legendäre Peitsche zur Verfügung.",
+  "cover": "images/indiana-jones-kaisergruft/cover.webp",
+  "screenshots": [
+    "images/indiana-jones-kaisergruft/screen01.webp",
+    "images/indiana-jones-kaisergruft/screen02.webp",
+    "images/indiana-jones-kaisergruft/screen03.webp"
+  ]
 }
 ]
