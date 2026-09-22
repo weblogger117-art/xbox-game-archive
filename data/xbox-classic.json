@@ -376,5 +376,23 @@
     "images/far-cry-instincts/screen02.webp",
     "images/far-cry-instincts/screen03.webp"
   ]
+},
+  {
+  "id": "fuzion-frenzy",
+  "title": "Fuzion Frenzy",
+  "platform": "Xbox Classic",
+  "fsk": 6,
+  "genre": "Party",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2001,
+  "developer": "Blitz Games",
+  "description": "Fuzion Frenzy ist ein actionreiches Partyspiel, bei dem bis zu vier Spieler in zahlreichen verrückten Minispielen gegeneinander antreten. In verschiedenen Arenen geht es darum, Punkte zu sammeln, Gegner auszutricksen und sich in abwechslungsreichen Herausforderungen durchzusetzen.",
+  "cover": "images/fuzion-frenzy/cover.webp",
+  "screenshots": [
+    "images/fuzion-frenzy/screen01.webp",
+    "images/fuzion-frenzy/screen02.webp",
+    "images/fuzion-frenzy/screen03.webp"
+  ]
 }
 ]
