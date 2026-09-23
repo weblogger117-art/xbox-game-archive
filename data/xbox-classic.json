@@ -646,5 +646,23 @@
     "images/max-payne/screen02.webp",
     "images/max-payne/screen03.webp"
   ]
+},
+  {
+  "id": "max-payne-2",
+  "title": "Max Payne 2: The Fall of Max Payne",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Third-Person-Shooter",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "Remedy Entertainment",
+  "description": "Max Payne 2: The Fall of Max Payne setzt die Geschichte des ehemaligen Polizisten Max Payne fort. In einer düsteren und von Noir-Elementen geprägten Geschichte gerät Max erneut in einen Strudel aus Verbrechen, Verrat und persönlicher Tragödie. Mit spektakulären Zeitlupen-Schusswechseln und einer Vielzahl von Waffen kämpft er sich durch die Unterwelt von New York.",
+  "cover": "images/max-payne-2/cover.webp",
+  "screenshots": [
+    "images/max-payne-2/screen01.webp",
+    "images/max-payne-2/screen02.webp",
+    "images/max-payne-2/screen03.webp"
+  ]
 }
 ]
