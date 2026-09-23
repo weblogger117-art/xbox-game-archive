@@ -44,7 +44,14 @@ async function loadGames() {
 
         games = data.flat();
 
-        displayGames(games);
+// Spiele standardmäßig alphabetisch nach Titel sortieren
+games.sort((a, b) =>
+    a.title.localeCompare(b.title, "de", {
+        sensitivity: "base"
+    })
+);
+
+displayGames(games);
 
     } catch (error) {
         console.error("Fehler beim Laden der Spieldaten:", error);
