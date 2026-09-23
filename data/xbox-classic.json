@@ -682,5 +682,23 @@
     "images/manhunt/screen02.webp",
     "images/manhunt/screen03.webp"
   ]
+},
+  {
+  "id": "ninja-gaiden",
+  "title": "Ninja Gaiden",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2004,
+  "developer": "Team Ninja",
+  "description": "Ninja Gaiden begleitet den Ninja Ryu Hayabusa auf einer gefährlichen Reise voller schneller Kämpfe, akrobatischer Bewegungen und mächtiger Gegner. Mit seinem Schwert und zahlreichen Ninpo-Techniken kämpft sich Ryu durch verschiedene Schauplätze, während er das Geheimnis hinter dem Angriff auf seinen Clan aufdeckt.",
+  "cover": "images/ninja-gaiden/cover.webp",
+  "screenshots": [
+    "images/ninja-gaiden/screen01.webp",
+    "images/ninja-gaiden/screen02.webp",
+    "images/ninja-gaiden/screen03.webp"
+  ]
 }
 ]
