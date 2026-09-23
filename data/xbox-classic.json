@@ -718,5 +718,23 @@
     "images/need-for-speed-underground/screen02.webp",
     "images/need-for-speed-underground/screen03.webp"
   ]
+},
+  {
+  "id": "need-for-speed-underground-2",
+  "title": "Need for Speed Underground 2",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2004,
+  "developer": "EA Black Box",
+  "description": "Need for Speed Underground 2 führt die Straßenrennserie in eine große, frei befahrbare Stadt. Der Spieler baut sich einen eigenen Ruf auf, nimmt an zahlreichen Rennen und Herausforderungen teil und individualisiert seine Fahrzeuge mit umfangreichen Leistungs- und Tuningoptionen. Neben klassischen Rennen sorgen Drift-, Drag- und Street-X-Wettbewerbe für zusätzliche Abwechslung.",
+  "cover": "images/need-for-speed-underground-2/cover.webp",
+  "screenshots": [
+    "images/need-for-speed-underground-2/screen01.webp",
+    "images/need-for-speed-underground-2/screen02.webp",
+    "images/need-for-speed-underground-2/screen03.webp"
+  ]
 }
 ]
