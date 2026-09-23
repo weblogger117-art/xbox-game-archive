@@ -772,5 +772,23 @@
     "images/oddworld-strangers-vergeltung/screen02.webp",
     "images/oddworld-strangers-vergeltung/screen03.webp"
   ]
+},
+  {
+  "id": "project-gotham-racing",
+  "title": "Project Gotham Racing",
+  "platform": "Xbox Classic",
+  "fsk": 0,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2001,
+  "developer": "Bizarre Creations",
+  "description": "Project Gotham Racing ist eine Rennsimulation, bei der nicht nur Geschwindigkeit, sondern auch spektakuläre Fahrmanöver und ein sauberer Fahrstil zählen. Der Spieler tritt mit leistungsstarken Sportwagen auf realistisch gestalteten Stadtkursen an und sammelt durch riskante und elegante Manöver zusätzliche Kudos.",
+  "cover": "images/project-gotham-racing/cover.webp",
+  "screenshots": [
+    "images/project-gotham-racing/screen01.webp",
+    "images/project-gotham-racing/screen02.webp",
+    "images/project-gotham-racing/screen03.webp"
+  ]
 }
 ]
