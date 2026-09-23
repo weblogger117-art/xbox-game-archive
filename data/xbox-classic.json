@@ -790,5 +790,23 @@
     "images/project-gotham-racing/screen02.webp",
     "images/project-gotham-racing/screen03.webp"
   ]
+},
+  {
+  "id": "predator-concrete-jungle",
+  "title": "Predator: Concrete Jungle",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Eurocom",
+  "description": "Predator: Concrete Jungle versetzt den Spieler in die Rolle eines Predators, der sich auf einem persönlichen Rachefeldzug durch eine von Verbrechen und Korruption geprägte Stadt kämpft. Mit Tarnvorrichtung, verschiedenen Predator-Waffen und übernatürlichen Fähigkeiten jagt er seine Gegner und stellt seine Fähigkeiten als tödlicher Jäger unter Beweis.",
+  "cover": "images/predator-concrete-jungle/cover.webp",
+  "screenshots": [
+    "images/predator-concrete-jungle/screen01.webp",
+    "images/predator-concrete-jungle/screen02.webp",
+    "images/predator-concrete-jungle/screen03.webp"
+  ]
 }
 ]
