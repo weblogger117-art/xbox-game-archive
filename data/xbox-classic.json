@@ -754,5 +754,23 @@
     "images/oddworld-munchs-oddysee/screen02.webp",
     "images/oddworld-munchs-oddysee/screen03.webp"
   ]
+},
+  {
+  "id": "oddworld-strangers-vergeltung",
+  "title": "Oddworld: Stranger's Vergeltung",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Oddworld Inhabitants",
+  "description": "Oddworld: Stranger's Vergeltung begleitet den geheimnisvollen Kopfgeldjäger Stranger auf seiner Reise durch die ungewöhnliche Welt von Oddworld. Mit einer einzigartigen Kombination aus Third-Person- und Ego-Perspektive jagt er gesuchte Verbrecher und setzt dabei lebende Munition sowie verschiedene Waffen und Fähigkeiten ein.",
+  "cover": "images/oddworld-strangers-vergeltung/cover.webp",
+  "screenshots": [
+    "images/oddworld-strangers-vergeltung/screen01.webp",
+    "images/oddworld-strangers-vergeltung/screen02.webp",
+    "images/oddworld-strangers-vergeltung/screen03.webp"
+  ]
 }
 ]
