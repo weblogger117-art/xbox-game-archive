@@ -664,5 +664,23 @@
     "images/max-payne-2/screen02.webp",
     "images/max-payne-2/screen03.webp"
   ]
+},
+  {
+  "id": "manhunt",
+  "title": "Manhunt",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Third-Person-Shooter",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2004,
+  "developer": "Rockstar North",
+  "description": "Manhunt ist ein düsteres Stealth-Action-Spiel, in dem der zum Tode verurteilte James Earl Cash in einer von Gewalt und Korruption geprägten Stadt ums Überleben kämpft. Mithilfe von Schatten, Ablenkungen und verschiedenen Waffen versucht er, feindlichen Gegnern aus dem Weg zu gehen und sich durch gefährliche Umgebungen zu bewegen.",
+  "cover": "images/manhunt/cover.webp",
+  "screenshots": [
+    "images/manhunt/screen01.webp",
+    "images/manhunt/screen02.webp",
+    "images/manhunt/screen03.webp"
+  ]
 }
 ]
