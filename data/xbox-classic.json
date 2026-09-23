@@ -610,5 +610,23 @@
     "images/metal-slug-4/screen02.webp",
     "images/metal-slug-4/screen03.webp"
   ]
+},
+  {
+  "id": "metal-gear-solid-2-substance",
+  "title": "Metal Gear Solid 2: Substance",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2002,
+  "developer": "Konami Computer Entertainment Japan",
+  "description": "Metal Gear Solid 2: Substance ist ein taktisches Stealth-Abenteuer, in dem Solid Snake und Raiden gegen eine geheime Organisation und die mächtigen Metal-Gear-Kampfsysteme kämpfen. Schleichen, Beobachtung und taktisches Vorgehen stehen im Mittelpunkt, während die komplexe Geschichte zahlreiche Wendungen und Verschwörungen bereithält.",
+  "cover": "images/metal-gear-solid-2-substance/cover.webp",
+  "screenshots": [
+    "images/metal-gear-solid-2-substance/screen01.webp",
+    "images/metal-gear-solid-2-substance/screen02.webp",
+    "images/metal-gear-solid-2-substance/screen03.webp"
+  ]
 }
 ]
