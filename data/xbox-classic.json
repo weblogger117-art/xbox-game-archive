@@ -592,5 +592,23 @@
     "images/metal-slug-3/screen02.webp",
     "images/metal-slug-3/screen03.webp"
   ]
+},
+  {
+  "id": "metal-slug-4",
+  "title": "Metal Slug 4",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2005,
+  "developer": "SNK Playmore",
+  "description": "Metal Slug 4 ist ein rasanter 2D-Action-Shooter, in dem sich die Spieler mit zahlreichen Waffen und Fahrzeugen durch abwechslungsreiche Levels kämpfen. Neben feindlichen Soldaten stellen sich den Helden mächtige Bosse und zahlreiche andere Gefahren in den Weg. Der klassische Zwei-Spieler-Koop sorgt dabei für besonders chaotische Gefechte.",
+  "cover": "images/metal-slug-4/cover.webp",
+  "screenshots": [
+    "images/metal-slug-4/screen01.webp",
+    "images/metal-slug-4/screen02.webp",
+    "images/metal-slug-4/screen03.webp"
+  ]
 }
 ]
