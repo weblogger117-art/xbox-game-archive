@@ -628,5 +628,23 @@
     "images/metal-gear-solid-2-substance/screen02.webp",
     "images/metal-gear-solid-2-substance/screen03.webp"
   ]
+},
+  {
+  "id": "max-payne",
+  "title": "Max Payne",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Third-Person-Shooter",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2001,
+  "developer": "Remedy Entertainment",
+  "description": "Max Payne ist ein düsterer Third-Person-Shooter, in dem der gleichnamige Polizist nach dem Mord an seiner Familie auf einen persönlichen Rachefeldzug geht. Als Undercover-Ermittler gerät Max in eine gefährliche Verschwörung und kämpft sich mit verschiedenen Waffen und spektakulären Zeitlupenmanövern durch die Unterwelt von New York.",
+  "cover": "images/max-payne/cover.webp",
+  "screenshots": [
+    "images/max-payne/screen01.webp",
+    "images/max-payne/screen02.webp",
+    "images/max-payne/screen03.webp"
+  ]
 }
 ]
