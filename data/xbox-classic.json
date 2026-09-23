@@ -736,5 +736,23 @@
     "images/need-for-speed-underground-2/screen02.webp",
     "images/need-for-speed-underground-2/screen03.webp"
   ]
+},
+  {
+  "id": "oddworld-munchs-oddysee",
+  "title": "Oddworld: Munch's Oddysee",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2001,
+  "developer": "Oddworld Inhabitants",
+  "description": "Oddworld: Munch's Oddysee ist ein actionreiches Abenteuer, in dem der Spieler zwischen den beiden Charakteren Abe und Munch wechselt. Gemeinsam versuchen sie, die letzten Eier einer seltenen Spezies zu retten und dabei die skrupellosen Glukkons aufzuhalten. Unterschiedliche Fähigkeiten und die Möglichkeit, andere Kreaturen zu kontrollieren, sorgen für abwechslungsreiche Herausforderungen.",
+  "cover": "images/oddworld-munchs-oddysee/cover.webp",
+  "screenshots": [
+    "images/oddworld-munchs-oddysee/screen01.webp",
+    "images/oddworld-munchs-oddysee/screen02.webp",
+    "images/oddworld-munchs-oddysee/screen03.webp"
+  ]
 }
 ]
