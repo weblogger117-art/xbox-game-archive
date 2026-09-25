@@ -898,5 +898,23 @@
     "images/still-life/screen02.webp",
     "images/still-life/screen03.webp"
   ]
+},
+  {
+  "id": "silent-hill-4-the-room",
+  "title": "Silent Hill 4: The Room",
+  "platform": "Xbox Classic",
+  "fsk": 18,
+  "genre": "Survival-Horror",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2004,
+  "developer": "Konami Computer Entertainment Tokyo",
+  "description": "Silent Hill 4: The Room erzählt die Geschichte von Henry Townshend, der in seiner Wohnung gefangen ist und einen geheimnisvollen Zugang zu einer Reihe unheimlicher Welten entdeckt. Auf seiner Reise begegnet er grotesken Kreaturen, rätselhaften Erscheinungen und einer düsteren Geschichte rund um den mysteriösen Walter Sullivan. Rätsel, Erkundung und psychologischer Horror stehen dabei im Mittelpunkt.",
+  "cover": "images/silent-hill-4-the-room/cover.webp",
+  "screenshots": [
+    "images/silent-hill-4-the-room/screen01.webp",
+    "images/silent-hill-4-the-room/screen02.webp",
+    "images/silent-hill-4-the-room/screen03.webp"
+  ]
 }
 ]
