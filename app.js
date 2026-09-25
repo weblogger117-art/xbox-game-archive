@@ -233,15 +233,15 @@ function openGameDetail(gameId) {
 
     /* Sammlung ausblenden */
 
-    document.querySelector(".hero").hidden = true;
+document.querySelector(".hero").hidden = true;
 
-    document.querySelector(".search-section").hidden = true;
+document.querySelector(".search-section").hidden = true;
 
-    document.querySelector(".filters").hidden = true;
+document.querySelector(".filters").hidden = true;
 
-    document.querySelector(".game-counter").hidden = true;
+document.querySelector(".game-toolbar").hidden = true;
 
-    document.querySelector(".games-section").hidden = true;
+document.querySelector(".games-section").hidden = true;
 
 
     /* Detailansicht anzeigen */
@@ -525,8 +525,8 @@ function closeGameDetail() {
         .hidden = false;
 
     document
-        .querySelector(".game-counter")
-        .hidden = false;
+    .querySelector(".game-toolbar")
+    .hidden = false;
 
     document
         .querySelector(".games-section")
