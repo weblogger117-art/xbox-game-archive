@@ -970,5 +970,23 @@
     "images/splinter-cell-chaos-theory/screen02.webp",
     "images/splinter-cell-chaos-theory/screen03.webp"
   ]
+},
+  {
+  "id": "soul-calibur-2",
+  "title": "SoulCalibur II",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Beat 'em up",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2003,
+  "developer": "Project Soul",
+  "description": "SoulCalibur II ist ein 3D-Kampfspiel, in dem sich zahlreiche Kämpfer mit unterschiedlichen Waffen und Kampfstilen gegenüberstehen. Jeder Charakter verfolgt seine eigene Geschichte rund um die legendäre Waffe Soul Edge. Neben verschiedenen Einzelspielermodi bietet das Spiel spannende Kämpfe gegen Freunde an einer Konsole.",
+  "cover": "images/soul-calibur-2/cover.webp",
+  "screenshots": [
+    "images/soul-calibur-2/screen01.webp",
+    "images/soul-calibur-2/screen02.webp",
+    "images/soul-calibur-2/screen03.webp"
+  ]
 }
 ]
