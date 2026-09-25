@@ -1,5 +1,6 @@
 let games = [];
 let currentGame = null;
+let currentSort = "title-asc";
 
 
 /* =========================================================
@@ -62,10 +63,47 @@ displayGames(games);
    SPIELE ANZEIGEN
    ========================================================= */
 
-function displayGames(gameList) {
+function sortGames(gameList) {
+    const sortedGames = [...gameList];
 
-    const gamesGrid =
-        document.getElementById("gamesGrid");
+    switch (currentSort) {
+
+        case "title-asc":
+            sortedGames.sort((a, b) =>
+                a.title.localeCompare(b.title, "de", {
+                    sensitivity: "base"
+                })
+            );
+            break;
+
+        case "title-desc":
+            sortedGames.sort((a, b) =>
+                b.title.localeCompare(a.title, "de", {
+                    sensitivity: "base"
+                })
+            );
+            break;
+
+        case "year-desc":
+            sortedGames.sort((a, b) =>
+                (b.year || 0) - (a.year || 0)
+            );
+            break;
+
+        case "year-asc":
+            sortedGames.sort((a, b) =>
+                (a.year || 0) - (b.year || 0)
+            );
+            break;
+    }
+
+    return sortedGames;
+}
+
+function displayGames(gameList) {
+    gameList = sortGames(gameList);
+
+    const gamesGrid = document.getElementById("gamesGrid");
 
     const counter =
         document.querySelector(".counter-number");
@@ -962,5 +1000,12 @@ filterToggle.addEventListener(
 /* =========================================================
    START
    ========================================================= */
+const sortSelect = document.getElementById("sortSelect");
+
+sortSelect.addEventListener("change", () => {
+    currentSort = sortSelect.value;
+
+    applyFilters();
+});
 
 loadGames();
