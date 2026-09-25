@@ -916,5 +916,23 @@
     "images/silent-hill-4-the-room/screen02.webp",
     "images/silent-hill-4-the-room/screen03.webp"
   ]
+},
+  {
+  "id": "splinter-cell",
+  "title": "Tom Clancy's Splinter Cell",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2002,
+  "developer": "Ubisoft Montreal",
+  "description": "Tom Clancy's Splinter Cell ist ein taktisches Stealth-Actionspiel, in dem der ehemalige Navy-SEAL Sam Fisher für die geheime Third Echelon-Einheit arbeitet. Mit modernster Ausrüstung infiltriert er feindliche Einrichtungen, beschafft geheime Informationen und versucht, seine Missionen möglichst unbemerkt abzuschließen. Dunkelheit, Tarnung und taktisches Vorgehen sind dabei entscheidend.",
+  "cover": "images/splinter-cell/cover.webp",
+  "screenshots": [
+    "images/splinter-cell/screen01.webp",
+    "images/splinter-cell/screen02.webp",
+    "images/splinter-cell/screen03.webp"
+  ]
 }
 ]
