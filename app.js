@@ -2,6 +2,8 @@ let games = [];
 let currentGame = null;
 let currentSort = "title-asc";
 
+console.log("NEUE APP.JS WIRD GELADEN");
+
 
 /* =========================================================
    AKTIVE FILTER
