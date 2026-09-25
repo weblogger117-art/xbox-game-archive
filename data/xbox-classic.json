@@ -952,5 +952,23 @@
     "images/splinter-cell-pandora-tomorrow/screen02.webp",
     "images/splinter-cell-pandora-tomorrow/screen03.webp"
   ]
+},
+  {
+  "id": "splinter-cell-chaos-theory",
+  "title": "Tom Clancy's Splinter Cell: Chaos Theory",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2005,
+  "developer": "Ubisoft Montreal",
+  "description": "Tom Clancy's Splinter Cell: Chaos Theory führt Sam Fisher auf gefährliche Geheimmissionen rund um den Globus. Als Agent der Third-Echelon-Einheit muss er internationale Konflikte verhindern und geheime Operationen durchführen. Dabei stehen Schleichen, taktisches Vorgehen und der gezielte Einsatz moderner Spionageausrüstung im Mittelpunkt. Neben der Einzelspieler-Kampagne bietet das Spiel auch einen separaten kooperativen Mehrspielermodus.",
+  "cover": "images/splinter-cell-chaos-theory/cover.webp",
+  "screenshots": [
+    "images/splinter-cell-chaos-theory/screen01.webp",
+    "images/splinter-cell-chaos-theory/screen02.webp",
+    "images/splinter-cell-chaos-theory/screen03.webp"
+  ]
 }
 ]
