@@ -862,5 +862,23 @@
     "images/rallisport-challenge/screen02.webp",
     "images/rallisport-challenge/screen03.webp"
   ]
+},
+  {
+  "id": "rallisport-challenge-2",
+  "title": "RalliSport Challenge 2",
+  "platform": "Xbox Classic",
+  "fsk": 0,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2004,
+  "developer": "Digital Illusions CE",
+  "description": "RalliSport Challenge 2 ist ein abwechslungsreiches Rallye-Rennspiel mit zahlreichen Fahrzeugen und unterschiedlichen Rennsportarten. Auf Schotter, Asphalt, Schnee und Eis tritt der Spieler in Rallyes, Rundkursen, Hillclimbs und weiteren Wettbewerben an. Ein umfangreicher Karriere- und Mehrspielermodus sorgt für zusätzliche Herausforderungen.",
+  "cover": "images/rallisport-challenge-2/cover.webp",
+  "screenshots": [
+    "images/rallisport-challenge-2/screen01.webp",
+    "images/rallisport-challenge-2/screen02.webp",
+    "images/rallisport-challenge-2/screen03.webp"
+  ]
 }
 ]
