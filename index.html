@@ -549,18 +549,23 @@
                  SPIELEZÄHLER
                  ================================================= -->
 
-            <section class="game-counter">
+            <div class="game-toolbar">
+    <div class="game-counter">
+        <span class="counter-number">0</span>
+        <span>Spiele gefunden</span>
+    </div>
 
-                <span class="counter-number">
-                    0
-                </span>
+    <div class="sort-control">
+        <label for="sortSelect">Sortieren:</label>
 
-
-                <span class="counter-label">
-                    SPIELE GEFUNDEN
-                </span>
-
-            </section>
+        <select id="sortSelect">
+            <option value="title-asc">Titel A–Z</option>
+            <option value="title-desc">Titel Z–A</option>
+            <option value="year-desc">Erscheinungsjahr: Neu → Alt</option>
+            <option value="year-asc">Erscheinungsjahr: Alt → Neu</option>
+        </select>
+    </div>
+</div>
 
 
 
