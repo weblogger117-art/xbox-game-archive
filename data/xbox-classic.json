@@ -844,5 +844,23 @@
     "images/racing-evoluzione/screen02.webp",
     "images/racing-evoluzione/screen03.webp"
   ]
+},
+  {
+  "id": "rallisport-challenge",
+  "title": "RalliSport Challenge",
+  "platform": "Xbox Classic",
+  "fsk": 0,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2002,
+  "developer": "Digital Illusions CE",
+  "description": "RalliSport Challenge ist ein abwechslungsreiches Rallye-Rennspiel mit unterschiedlichen Rennarten und anspruchsvollen Strecken. Der Spieler tritt mit verschiedenen Rallye-Fahrzeugen auf Schotter, Asphalt, Schnee und Eis an und muss sein Können in Rallye-Etappen, Rundkursen und weiteren Wettbewerben unter Beweis stellen.",
+  "cover": "images/rallisport-challenge/cover.webp",
+  "screenshots": [
+    "images/rallisport-challenge/screen01.webp",
+    "images/rallisport-challenge/screen02.webp",
+    "images/rallisport-challenge/screen03.webp"
+  ]
 }
 ]
