@@ -934,5 +934,23 @@
     "images/splinter-cell/screen02.webp",
     "images/splinter-cell/screen03.webp"
   ]
+},
+  {
+  "id": "splinter-cell-pandora-tomorrow",
+  "title": "Tom Clancy's Splinter Cell: Pandora Tomorrow",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2004,
+  "developer": "Ubisoft Shanghai",
+  "description": "Tom Clancy's Splinter Cell: Pandora Tomorrow führt die Geschichte von Sam Fisher fort. Als Agent der geheimen Third-Echelon-Einheit muss er eine gefährliche biologische Bedrohung aufdecken und verhindern, dass ein internationaler Konflikt eskaliert. Mit Nachtsichtgerät, Schalldämpfer und moderner Spionageausrüstung infiltriert Sam feindliche Einrichtungen und erledigt seine Missionen möglichst unbemerkt.",
+  "cover": "images/splinter-cell-pandora-tomorrow/cover.webp",
+  "screenshots": [
+    "images/splinter-cell-pandora-tomorrow/screen01.webp",
+    "images/splinter-cell-pandora-tomorrow/screen02.webp",
+    "images/splinter-cell-pandora-tomorrow/screen03.webp"
+  ]
 }
 ]
