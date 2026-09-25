@@ -826,5 +826,23 @@
     "images/psychonauts/screen02.webp",
     "images/psychonauts/screen03.webp"
   ]
+},
+  {
+  "id": "racing-evoluzione",
+  "title": "Racing Evoluzione",
+  "platform": "Xbox Classic",
+  "fsk": 0,
+  "genre": "Racer",
+  "availability": "Disc",
+  "couchCoop": true,
+  "year": 2003,
+  "developer": "Milestone",
+  "description": "Racing Evoluzione ist ein Rennspiel, bei dem der Spieler nicht nur Rennen fährt, sondern sein eigenes Rennteam aufbaut und weiterentwickelt. Durch gewonnene Rennen werden neue Fahrzeuge und Möglichkeiten freigeschaltet, während die eigene Rennsportkarriere Schritt für Schritt ausgebaut wird. Neben verschiedenen Rennstrecken bietet das Spiel eine Auswahl an Sportwagen und einen lokalen Mehrspielermodus.",
+  "cover": "images/racing-evoluzione/cover.webp",
+  "screenshots": [
+    "images/racing-evoluzione/screen01.webp",
+    "images/racing-evoluzione/screen02.webp",
+    "images/racing-evoluzione/screen03.webp"
+  ]
 }
 ]
