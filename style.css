@@ -2873,3 +2873,61 @@ button {
         max-width: 520px;
     }
 }
+
+.game-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-control label {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.sort-control select {
+    min-height: 40px;
+    padding: 8px 34px 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.82rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.sort-control select:focus {
+    border-color: var(--xbox-green);
+}
+
+.sort-control select option {
+    background: var(--surface);
+    color: var(--text);
+}
+
+@media (max-width: 700px) {
+    .game-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .sort-control {
+        justify-content: space-between;
+    }
+
+    .sort-control select {
+        flex: 1;
+        max-width: 220px;
+    }
+}
