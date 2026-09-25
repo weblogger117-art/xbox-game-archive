@@ -880,5 +880,23 @@
     "images/rallisport-challenge-2/screen02.webp",
     "images/rallisport-challenge-2/screen03.webp"
   ]
+},
+  {
+  "id": "still-life",
+  "title": "Still Life",
+  "platform": "Xbox Classic",
+  "fsk": 16,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Microids",
+  "description": "Still Life ist ein düsteres Adventure, in dem die FBI-Agentin Victoria McPherson eine Reihe brutaler Morde untersucht. Die Ermittlungen führen sie in das Chicago der Gegenwart und zu einem ungelösten Mordfall aus der Vergangenheit. Durch die Verbindung beider Zeitebenen entwickelt sich eine atmosphärische Kriminalgeschichte voller Rätsel, Hinweise und mysteriöser Zusammenhänge.",
+  "cover": "images/still-life/cover.webp",
+  "screenshots": [
+    "images/still-life/screen01.webp",
+    "images/still-life/screen02.webp",
+    "images/still-life/screen03.webp"
+  ]
 }
 ]
