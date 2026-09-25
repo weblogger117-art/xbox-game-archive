@@ -2931,3 +2931,16 @@ button {
         max-width: 220px;
     }
 }
+
+/* =========================================================
+   DETAILANSICHT
+   ========================================================= */
+
+body.detail-view .hero,
+body.detail-view .search-section,
+body.detail-view .filters,
+body.detail-view .game-toolbar,
+body.detail-view .game-counter,
+body.detail-view .games-section {
+    display: none !important;
+}
