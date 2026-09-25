@@ -808,5 +808,23 @@
     "images/predator-concrete-jungle/screen02.webp",
     "images/predator-concrete-jungle/screen03.webp"
   ]
+},
+  {
+  "id": "psychonauts",
+  "title": "Psychonauts",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2005,
+  "developer": "Double Fine Productions",
+  "description": "Psychonauts ist ein humorvolles Action-Adventure, in dem der junge Razputin Aquato seine außergewöhnlichen psychischen Fähigkeiten entdeckt und zum Psychonauten ausgebildet werden möchte. In einer ungewöhnlichen Welt erkundet er die Gedanken anderer Charaktere, löst Rätsel und setzt seine mentalen Kräfte im Kampf gegen verschiedene Gegner ein.",
+  "cover": "images/psychonauts/cover.webp",
+  "screenshots": [
+    "images/psychonauts/screen01.webp",
+    "images/psychonauts/screen02.webp",
+    "images/psychonauts/screen03.webp"
+  ]
 }
 ]
