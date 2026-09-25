@@ -988,5 +988,23 @@
     "images/soul-calibur-2/screen02.webp",
     "images/soul-calibur-2/screen03.webp"
   ]
+},
+  {
+  "id": "shenmue-2",
+  "title": "Shenmue II",
+  "platform": "Xbox Classic",
+  "fsk": 12,
+  "genre": "Action-Adventure",
+  "availability": "Disc",
+  "couchCoop": false,
+  "year": 2003,
+  "developer": "Sega AM2",
+  "description": "Shenmue II setzt die Geschichte von Ryo Hazuki fort, der nach Hongkong reist, um den mysteriösen Lan Di aufzuspüren und den Tod seines Vaters zu rächen. Auf seiner Reise erkundet Ryo weitläufige Stadtviertel, trifft zahlreiche Charaktere, löst Rätsel und stellt sich in intensiven Kämpfen seinen Gegnern. Neben der Handlung bieten zahlreiche Nebenaktivitäten und Minispiele eine lebendige und abwechslungsreiche Spielwelt.",
+  "cover": "images/shenmue-2/cover.webp",
+  "screenshots": [
+    "images/shenmue-2/screen01.webp",
+    "images/shenmue-2/screen02.webp",
+    "images/shenmue-2/screen03.webp"
+  ]
 }
 ]
